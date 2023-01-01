@@ -1,0 +1,46 @@
+/* 
+Theme Name: iran_trade
+Theme URI: /www.mohamad.ir/
+Author: the Alpha team
+Author URI: /www.mohamad.ir/
+Description: قالب ایران تجارت بزرگترین و با کیفیت ترین قالب ایرانی می باشد
+Version: 1.0
+*/
+:root{
+    --primary-color:#28B992;
+    --Secondary-color:#3A4166;
+    --page-color:#F1F1F1;
+    --box-shadow:#C5C5DF4F;
+    
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: vazir;
+    src: url("../fonts/woff2/Vazir-Medium.woff2");
+}
+
+body {
+    font-size: 65%;
+    background-color: var(--page-color);
+    font-family: vazir;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+img {
+    max-width: 100%;
+}
