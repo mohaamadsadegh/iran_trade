@@ -26,7 +26,7 @@ class slider extends Elementor\Widget_Base{
     }
     
     public function get_categories(){
-        return [ 'general' ];
+        return [ 'themsah' ];
     }
 
     protected function register_controls(){

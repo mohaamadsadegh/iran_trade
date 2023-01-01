@@ -28,7 +28,7 @@ class Accordion extends Elementor\Widget_Base{
     }
     
     public function get_categories(){
-        return [ 'category 1' ];
+        return [ 'themsah' ];
     }
 
     protected function register_controls(){
