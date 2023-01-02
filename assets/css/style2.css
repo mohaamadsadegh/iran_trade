@@ -17,15 +17,15 @@ body {
     /* background-color: #3A4166; */
 }
 
-.breadcrumbs-link span {
+.articles-breadcrumbs-link span {
     color: #626168;
 }
 
-.breadcrumbs-current {
+.articles-breadcrumbs-current {
     color: #3A4166;
 }
 
-.beadcrumbs-separator {
+.articles-beadcrumbs-separator {
     color: #929AC1;
 }
 
@@ -37,7 +37,7 @@ body {
     border-radius: 25px;
 }
 
-.search-field {
+.articles-search-field {
     border: none;
     color: #B8BDD7;
 }
@@ -47,7 +47,7 @@ body {
     border: none;
 }
 
-.search-form {
+.articles-search-form {
     flex-direction: row;
     color: #B8BDD7;
     width: 306px;
@@ -59,22 +59,20 @@ body {
     padding-right: 19px;
 }
 
-:focus-visible {
-    outline: none;
-}
 
-.titile-page {
+
+.title-page-articles {
     position: absolute;
     top: 30px;
 }
 
-.titile-page h1 {
+.title-page-articles h1 {
     color: #50598C;
     font-size: 25px;
     font-family: IRANSans;
 }
 
-.Filter {
+.filter-articles {
     display: flex;
     justify-content: end;
     top: 30px;

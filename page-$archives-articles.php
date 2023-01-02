@@ -1,0 +1,385 @@
+
+
+<body>
+
+
+
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12  text-right">
+                <div class="breadcrumbs-articles">
+                    <span>
+                        <a href="#" class="articles-breadcrumbs-link">
+                            <span>صفحه اصلی</span>
+                        </a>
+                    </span>
+                    <span class="articles-beadcrumbs-separator">></span>
+                    <span class="articles-breadcrumbs-current">آرشیو مقالات</span>
+                </div>
+            </div>
+        </div>
+        <div class="row text-right">
+            <div class="col-md-3">
+                <div class="search-articles">
+                    <form action="#" method="get" class="articles-search-form">
+                        <input type="text" class="archive-search-field" name="s" placeholder="جستجو کنید">
+                        <button type="submit" name="button" class="button">
+                            <img src="./img/Vector.1.svg" alt="">
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="title-page-articles">
+                    <h1>آرشیو مقالات</h1>
+                </div>
+            </div>
+            <div class="col-md-6  filter-articles">
+                <div class="nice-select">
+                    <span class="current">فیلتربندی:</span>
+                    <ul class="orderby">
+                        <li class="New">جدیدترین</li>
+                        <li class="Old">قدیمی ترین</li>
+                        <li class="most-visited">پربازدید ترین</li>
+                    </ul>
+                    <span>
+                        <img src="./img/Vector.svg" alt="">
+                    </span>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="sidebar-ar col-md-3">
+                <div class="grouping-article text-right">
+                    <h3>دسته بندی مقالات
+                        <svg width="36" height="5" viewBox="0 0 36 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 1C1 1 3.19583 4.00338 5.20369 4C7.20684 3.99663 7.38945 1.00337 9.3926 1C11.4005 0.996622 11.5884 4 13.5963 4C15.6042 4 15.7921 0.996618 17.8 1C19.8031 1.00337 19.9858 3.99663 21.9889 4C23.9968 4.00338 24.1847 0.999998 26.1926 1C28.2005 1 28.3884 4 30.3963 4C32.4042 4 34.6 1 34.6 1"
+                                stroke="#28B992" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </h3>
+                    <ul>
+                        <li>دسته بندی 1</li>
+                        <li>دسته بندی 2</li>
+                        <li>دسته بندی 3</li>
+                        <li>دسته بندی 4</li>
+                        <li>دسته بندی 5</li>
+                    </ul>
+                </div>
+                <div class="Lately-article text-right">
+                    <h3>مقالات اخیر
+                        <svg width="36" height="5" viewBox="0 0 36 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 1C1 1 3.19583 4.00338 5.20369 4C7.20684 3.99663 7.38945 1.00337 9.3926 1C11.4005 0.996622 11.5884 4 13.5963 4C15.6042 4 15.7921 0.996618 17.8 1C19.8031 1.00337 19.9858 3.99663 21.9889 4C23.9968 4.00338 24.1847 0.999998 26.1926 1C28.2005 1 28.3884 4 30.3963 4C32.4042 4 34.6 1 34.6 1"
+                                stroke="#28B992" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </h3>
+                    <div class="side-article  d-flex">
+                        <div class="side-article-box">
+                            <img src="./img/Rectangle 30 (3).png" alt="">
+                        </div>
+                        <div class="info-article-box">
+                            <h4>لورم ایپسوم متن ساختگی با تولید </h4>
+                            <p>1401/08/07</p>
+                        </div>
+                        
+                    </div>
+                    <hr class="Separator">
+                    <div class="side-article  d-flex">
+                        <div class="side-article-box">
+                            <img src="./img/Rectangle 30 (3).png" alt="">
+                        </div>
+                        <div class="info-article-box">
+                            <h4>لورم ایپسوم متن ساختگی با تولید </h4>
+                            <p>1401/08/07</p>
+                        </div>
+                    </div>
+                    <hr class="Separator">
+                    <div class="side-article  d-flex">
+                        <div class="side-article-box">
+                            <img src="./img/Rectangle 30 (3).png" alt="">
+                        </div>
+                        <div class="info-article-box">
+                            <h4>لورم ایپسوم متن ساختگی با تولید </h4>
+                            <p>1401/08/07</p>
+                        </div>
+                    </div>
+                    <hr class="Separator">
+                    <div class="side-article  d-flex">
+                        <div class="side-article-box">
+                            <img src="./img/Rectangle 30 (3).png" alt="">
+                        </div>
+                        <div class="info-article-box">
+                            <h4>لورم ایپسوم متن ساختگی با تولید </h4>
+                            <p>1401/08/07</p>
+                        </div>
+                    </div>
+                    <hr class="Separator">
+                    <div class="side-article  d-flex">
+                        <div class="side-article-box">
+                            <img src="./img/Rectangle 30 (3).png" alt="">
+                        </div>
+                        <div class="info-article-box">
+                            <h4>لورم ایپسوم متن ساختگی با تولید </h4>
+                            <p>1401/08/07</p>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="advertising-banner">
+                  <a href="#">
+                    <img src="./img/Rectangle 75.png" alt="">
+                  </a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="articles-box d-flex">
+                    <div class="box-article">
+                        <div class="article ">
+                            <img src="./img/Rectangle 30.png" alt="">
+                            <h2>نحوه رفع تعهدات ارزی و سامانه نیما</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-article">
+                        <div class="article "> <img src="./img/Rectangle 30 (1).png" alt="">
+                            <h2>واردات و ترخیص کامیون از گمرک</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-article">
+                        <div class="article "> <img src="./img/Rectangle 30 (2).png" alt="">
+                            <h2>واردات و ترخیص ماشین از گمرک</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles-box d-flex">
+                    <div class="box-article">
+                        <div class="article ">
+                            <img src="./img/Rectangle 30.png" alt="">
+                            <h2>نحوه رفع تعهدات ارزی و سامانه نیما</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-article">
+                        <div class="article "> <img src="./img/Rectangle 30 (1).png" alt="">
+                            <h2>واردات و ترخیص کامیون از گمرک</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-article">
+                        <div class="article "> <img src="./img/Rectangle 30 (2).png" alt="">
+                            <h2>واردات و ترخیص ماشین از گمرک</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles-box d-flex">
+                    <div class="box-article">
+                        <div class="article ">
+                            <img src="./img/Rectangle 30.png" alt="">
+                            <h2>نحوه رفع تعهدات ارزی و سامانه نیما</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-article">
+                        <div class="article "> <img src="./img/Rectangle 30 (1).png" alt="">
+                            <h2>واردات و ترخیص کامیون از گمرک</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-article">
+                        <div class="article "> <img src="./img/Rectangle 30 (2).png" alt="">
+                            <h2>واردات و ترخیص ماشین از گمرک</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles-box d-flex">
+                    <div class="box-article">
+                        <div class="article ">
+                            <img src="./img/Rectangle 30.png" alt="">
+                            <h2>نحوه رفع تعهدات ارزی و سامانه نیما</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-article">
+                        <div class="article "> <img src="./img/Rectangle 30 (1).png" alt="">
+                            <h2>واردات و ترخیص کامیون از گمرک</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-article">
+                        <div class="article "> <img src="./img/Rectangle 30 (2).png" alt="">
+                            <h2>واردات و ترخیص ماشین از گمرک</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. </p>
+                            <div class="info-article d-flex">
+                                <div class="Date">
+                                    <p>1401/08/07</p>
+                                </div>
+                                <div class="icon-article">
+                                    <button>
+                                        <img src="./img/Icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 page-numbers-articles">
+                        <div class="col-md-2 page-numbers">
+                            <p>صفحه قبلی</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <br><br><br><br>
+
+
+
+
+
+</body>
+
+</html>
