@@ -1,0 +1,273 @@
+* {
+    direction: rtl;
+}
+
+@font-face {
+    font-family: "IranSans";
+    src: url("./fonts/ttf/IRANSansWeb.ttf") format("ttf");
+    src: url("./fonts/woff/IRANSansWeb.woff") format("woff");
+    src: url("./fonts/woff2/IRANSansWeb.woff2") format("woff2");
+    src: url("./fonts/eot/IRANSansWeb.eot") format("eot");
+    font-weight: 400;
+}
+
+body {
+    font-family: "IranSans";
+    background-color: #F0F2FA;
+    /* background-color: #3A4166; */
+}
+
+.breadcrumbs-link span {
+    color: #626168;
+}
+
+.breadcrumbs-current {
+    color: #3A4166;
+}
+
+.beadcrumbs-separator {
+    color: #929AC1;
+}
+
+.search {
+    position: absolute;
+    top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
+    border-radius: 25px;
+}
+
+.search-field {
+    border: none;
+    color: #B8BDD7;
+}
+
+.button {
+    background-color: #fff;
+    border: none;
+}
+
+.search-form {
+    flex-direction: row;
+    color: #B8BDD7;
+    width: 306px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+.titile-page {
+    position: absolute;
+    top: 30px;
+}
+
+.titile-page h1 {
+    color: #50598C;
+    font-size: 25px;
+    font-family: IRANSans;
+}
+
+.Filter {
+    display: flex;
+    justify-content: end;
+    top: 30px;
+}
+
+.nice-select {
+    position: absolute;
+    width: 220px;
+    height: 47px;
+    background: #fff;
+    box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
+    border-radius: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current {
+    color: #929AC1;
+}
+
+.orderby {
+    display: none;
+}
+
+.article {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
+}
+
+.box-article {
+    padding: 10px 10px 10px 10px;
+
+}
+
+.article img {
+    display: block;
+    width: 297px;
+    height: 160px;
+}
+
+.container {
+    max-width: 1450px;
+}
+
+.articles-box {
+    justify-content: end;
+}
+
+.article h2 {
+    font-weight: 600;
+    font-size: 17px;
+    font-family: IRANSans;
+    text-align: right;
+    color: #50598C;
+    padding: 20px 0 16px 48px;
+}
+
+.article p {
+    font-size: 15px;
+    text-align: right;
+    color: #50598C;
+}
+
+
+.info-article {
+    justify-content: space-between;
+}
+
+.Date {
+    background-color: #F0F2FA;
+    border-radius: 7px;
+}
+
+.Date p {
+    font-family: IRANSans;
+    padding: 5px 10px 5px 10px;
+    margin: 0;
+}
+
+.icon-article button img {
+    width: 33px;
+    padding: 10px;
+    height: 32px;
+}
+
+.icon-article button {
+    border: 1px solid #50598C;
+    border-radius: 10px;
+}
+
+.grouping-article {
+    background-color: #fff;
+    width: 306px;
+    height: 257px;
+    margin-bottom: 24px;
+    border-radius: 25px;
+    margin-top: 24px;
+}
+
+.Lately-article {
+    background-color: #fff;
+    width: 306px;
+    height: 506px;
+    border-radius: 25px;
+}
+
+.grouping-article h3 {
+    color: #3A4166;
+    font-size: 20px;
+    padding: 20px 20px 0 164px;
+    font-family: IRAN;
+}
+
+.Lately-article h3 {
+    color: #3A4166;
+    font-size: 20px;
+    padding: 20px 20px 0 208px;
+    font-family: IRAN;
+}
+
+.grouping-article ul>li {
+    color: #6C76AB;
+    margin-top: 15px;
+    font-size: 15px;
+    font-family: IRAN;
+}
+
+.side-article-box {
+    padding: 20px 20px 0px 20px;
+
+}
+
+.side-article-box img {
+    width: 50px;
+    height: 50px;
+}
+
+.info-article-box {
+    margin-top: 24px;
+}
+
+.info-article-box h4 {
+    font-size: 17px;
+    /* padding: 8px 14px 9px 20px; */
+    color: #6C76AB;
+    margin: 0;
+}
+
+.info-article-box p {
+    color: #B8BDD7;
+}
+
+.Separator {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    margin-right: 20px;
+    margin-left: 23px;
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+}
+
+.advertising-banner {
+    width: 306px;
+    height: 200px;
+    border-radius: 25px;
+    margin-top: 24px;
+}
+
+.advertising-banner img {
+    width: 306px;
+    height: 200px;
+}
+
+.page-numbers {
+    width: 105px;
+    height: 55px;
+    background: #FFFFFF;
+    box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.page-numbers p{
+    color: #50598C;
+}
+
+.page-numbers-articles{
+    display: flex;
+    justify-content: center;
+}
