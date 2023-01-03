@@ -28,6 +28,7 @@
             <div class="col-md-3">
                 <div class="search-articles">
                     <?php get_search_form(); ?>
+                    
                 </div>
             </div>
             <div class="col-md-3">
