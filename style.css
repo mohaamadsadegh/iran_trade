@@ -5,7 +5,6 @@ Author: the Alpha team
 Author URI: /www.mohamad.ir/
 Description: قالب ایران تجارت بزرگترین و با کیفیت ترین قالب ایرانی می باشد
 Version: 1.0
-<<<<<<< HEAD
 */
 :root{
     --primary-color:#28B992;
@@ -347,6 +346,3 @@ padding: 10px;
     border: .2px solid var(--primary-color);
     transition: .2s;
 }
-=======
-*/
->>>>>>> 05a7405ce321cd42afdcdff956d1c0ca384dd370

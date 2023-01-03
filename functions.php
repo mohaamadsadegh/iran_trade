@@ -6,13 +6,13 @@ add_theme_support('menu');
 
 use Automattic\Jetpack\Search\Customizer;
 
-function loadfiles()
-{
-  wp_enqueue_style('style', get_template_directory_uri() . './assets/css/style.css', false);
-  wp_enqueue_style('bootstrap', get_template_directory_uri() . './assets/css/bootstrap.min.css', false);
+// function loadfiles()
+// {
+//   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', false);
+//   wp_enqueue_style('bootstrap', get_template_directory_uri() . './assets/css/bootstrap.min.css', false);
  
-}
-add_action('wp_enqueue_scripts', 'loadfiles');
+// }
+// add_action('wp_enqueue_scripts', 'loadfiles');
 
 
 
