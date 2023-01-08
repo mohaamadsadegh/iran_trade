@@ -6,29 +6,19 @@
 <?php get_header(); ?>
 
 <body id="bg_archives_articles">
-
-
-
     <br><br><br><br>
-    <div class="container">
+    <div class="container ">
         <div class="row">
             <div class="col-md-12  text-right">
                 <div class="breadcrumbs-articles">
-                    <span>
-                        <a href="#" class="articles-breadcrumbs-link">
-                            <span>صفحه اصلی</span>
-                        </a>
-                    </span>
-                    <span class="articles-beadcrumbs-separator">></span>
-                    <span class="articles-breadcrumbs-current">آرشیو مقالات</span>
+                    <?php the_breadcrumb(); ?>
                 </div>
             </div>
         </div>
         <div class="row text-right">
             <div class="col-md-3">
                 <div class="search-articles">
-                    <?php get_search_form(); ?>
-
+                    <?php dynamic_sidebar('searchform'); ?>
                 </div>
             </div>
             <div class="col-md-3">
@@ -92,7 +82,6 @@
             <div class="row">
                 <div class="sidebar-article col-md-3">
                     <?php get_sidebar(); ?>
-
                 </div>
                 <div class="col-md-9">
                     <div class="articles-box d-flex">
@@ -116,6 +105,7 @@
                                                         <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M1 6H13M1 6L6 1M1 6L6 11" stroke="#6C76AB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                                         </svg>
+
                                                     </a>
                                                 </button>
                                             </div>
@@ -131,29 +121,33 @@
 
 
                     <div class="row">
-                        <div class="col-md-6 page-numbers-articles">
-                            <div class="col-md-2 page-numbers">
-                                <p>صفحه قبلی</p>
-                            </div>
-                            <div class="col-md-2">
-                                <p></p>
+                        <div class="col-md-9 page-numbers-articles">
+                            <div class="page-numbers">
+                                <div class='pagination'>
+
+                                    <div class="page-fore">
+                                    <a href="http://localhost/test2/%D8%A2%D8%B1%D8%B4%DB%8C%D9%88-%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA/">صفحه قبلی</a>
+                                </div>
+                                <ul style="padding-left: 0;margin-bottom: 2px;">
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">10</a></li>
+                                </ul>
+                                <div class="page-next">
+                                    <a href="http://localhost/test2/%D8%A2%D8%B1%D8%B4%DB%8C%D9%88-%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA/">صفحه بعدی</a>
+                                </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
 
-    </div>
-
-    </div>
-    </div>
 
 
-    <br><br><br><br>
+        <br><br><br><br>
 
 
 
