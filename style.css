@@ -6,16 +6,18 @@ Author URI: /www.mohamad.ir/
 Description: قالب ایران تجارت بزرگترین و با کیفیت ترین قالب ایرانی می باشد
 Version: 1.0
 */
-:root{
-    --primary-color:#28B992;
-    --Secondary-color:#3A4166;
-    --page-color:#F1F1F1;
-    --box-shadow:#C5C5DF4F;
+:root {
+    --primary-color: #28B992;
+    --Secondary-color: #3A4166;
+    --page-color: #F1F1F1;
+    --box-shadow: #C5C5DF4F;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -289,49 +291,55 @@ img {
     justify-content: center;
     align-items: flex-end;
 }
-.page-numbers p{
+
+.page-numbers p {
     color: #50598C;
 }
 
-.page-numbers-articles{
+.page-numbers-articles {
     display: flex;
     justify-content: center;
 }
 
 /* start search form header ->moh<- */
-.header_search_form  .search-btn{
-        background: white;
-        border-radius: 50%;
-        padding: 1rem;
-        outline: none;
-        font-size: 1.2rem;
-        color: var(--primary-color);
-        border: none;
+.header_search_form .search-btn {
+    background: white;
+    border-radius: 50%;
+    padding: 1rem;
+    outline: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    border: none;
 }
-.header_search_form  .search-btn:hover{
-   background-color: var(--primary-color);
-   color: #fff;
+
+.header_search_form .search-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
 }
-.header_search_form  .modal-dialog .modal-content input{
-width: 60%;
-margin: 0px auto;
-border-radius: 5px;
-padding: 5px;
-border: .2px solid var(--primary-color);
+
+.header_search_form .modal-dialog .modal-content input {
+    width: 60%;
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 5px;
+    border: .2px solid var(--primary-color);
 }
-.header_search_form  .modal-dialog .modal-content{
-padding: 10px;
+
+.header_search_form .modal-dialog .modal-content {
+    padding: 10px;
 }
-.header_search_form .modal-dialog .modal-content .btn-close{
+
+.header_search_form .modal-dialog .modal-content .btn-close {
     background-color: red;
     padding: 1rem;
     color: black;
 }
 
-  .header_search_form  .modal-dialog .modal-content input:focus-visible {
-   outline: 1px solid var(--primary-color);
-  }
-  .header_search_form .modal-dialog .modal-content .search_form_btn{
+.header_search_form .modal-dialog .modal-content input:focus-visible {
+    outline: 1px solid var(--primary-color);
+}
+
+.header_search_form .modal-dialog .modal-content .search_form_btn {
     background: var(--primary-color);
     color: #fff;
     padding: 5px 30px;
@@ -340,9 +348,202 @@ padding: 10px;
     border-radius: 5px;
     transition: .2s;
 }
-.header_search_form .modal-dialog .modal-content .search_form_btn:hover{
+
+.header_search_form .modal-dialog .modal-content .search_form_btn:hover {
     background: #fff;
     color: var(--primary-color);
     border: .2px solid var(--primary-color);
     transition: .2s;
+}
+
+.header_search_form .search-btn {
+    background: white;
+    border-radius: 50%;
+    padding: 1rem;
+    outline: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    border: none;
+}
+
+.header_search_form .search-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.header_search_form .modal-dialog .modal-content {
+    flex-direction: row;
+    border-radius: 50px;
+    padding: 1px 5px;
+    outline: 0;
+}
+
+.header_search_form .modal-dialog .modal-content .input_form_search {
+    width: 90%;
+    border-radius: 50px;
+    border: 1px white solid;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+
+.header_search_form .modal-dialog .modal-content .button_form_search {
+    width: 10%;
+    font-size: 1rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #EDEFFA;
+}
+
+.header_search_form .modal-dialog .modal-content input:focus-visible {
+    outline: none;
+}
+/* start login style */
+.login .login_button {
+    border: none;
+    padding: 16px 24px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 10px;
+    box-shadow: 0px 5px 10px rgba(40, 185, 146, 0.2);
+}
+/* ind login style */
+/* start card_shop  style */
+.card_shop .card_shop_button {
+    background: #EDEFFA;
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    padding: 1rem;
+    color: var(--Secondary-color);
+}
+/* start video slider ->moh<- */
+.video_slider{
+    padding-top: 5rem;
+}
+.video_slider .swiper {
+    width: 90%;
+    padding: 25px 0;
+}
+
+.video_slider .swiper .swiper-slide {
+    padding: 50px 0 0 0;
+    transition: .5s;
+}
+.video_slider .swiper .swiper-slide-active {
+    padding: 0 0 0 0 !important;
+    transition: .5s;
+
+}
+.video_slider .swiper .box {
+    border-radius: 25px;
+}
+
+.video_slider .swiper .swiper-slide .box video {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.video_slider .swiper .box video[poster]{
+    object-fit: cover;
+}
+
+.video_slider .swiper  .video_slider_pagination {
+    position: relative;
+    padding-top: 10px;
+}
+
+ .video_slider .swiper  .video-slider-button {
+    width: 100px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+.video_slider .swiper 
+.swiper-button-next,
+.swiper-button-prev
+{
+    background-image: none !important;
+}
+
+.video_slider .swiper .video-slider-button .swiper-button-next::after,
+.video_slider .swiper .video-slider-button .swiper-button-prev::after {
+    font-size: 1rem;
+   color: var(--primary-color);
+    background-color: #fff;
+    box-shadow: 0px 5px 30px -10px #48487499 !important;
+    padding: .5rem 1.2rem;
+    border-radius: 25px;
+}
+.video_slider .swiper .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--primary-color);
+}
+
+.slider_btn_icon{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: #0ff0;
+    border: none;
+}
+.slider_icon{
+    max-width: 20%;
+}
+/* ind video slider ->moh<- */
+/* start comment slider style ->moh<-*/
+.comment_slider{
+  width: 100%;
+
+}
+.comment_slider .swiper_comment{
+    width: 100%;
+    overflow: hidden;
+}
+.comment_slider .swiper_comment .box_comment{
+   position: relative;
+   width: 430px;
+   padding: 1rem;
+   background-color: #fff;
+   height: 250px;
+   margin-right: 20px;
+   border-radius: 25px;
+   box-shadow: 0px 4px 15px rgba(156, 156, 156, 0.1);
+}
+.comment_slider .swiper_comment .box_comment p{
+    font-size: 1rem;
+    color: var(--Secondary-color);
+    
+}
+.comment_slider .swiper_comment .box_comment .box_comment_content{
+    position: absolute;
+    background: #F0F2FA;
+    width: 90%;
+    height: 47px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    margin: 0 auto;
+    bottom: 20px;
+    padding: 0 16px 0 0;
+    align-content: space-between;
+    display: flex !important;
+    justify-content: space-between;
+}
+.comment_slider .swiper_comment .box_comment .box_comment_content .user_image{
+    height: 100%;
+    border-radius: 50%;
+    width: 50px;
+  
+}
+.box_comment_user{
+    margin-right: 10px;
+    color: var(--Secondary-color);
+}
+.box_comment_cat{
+    margin-right: 10px;
+    color: #50598C;
 }
