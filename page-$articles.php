@@ -126,7 +126,7 @@
                                 <div class='pagination'>
 
                                     <div class="page-fore">
-                                    <a href="http://localhost/test2/%D8%A2%D8%B1%D8%B4%DB%8C%D9%88-%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA/">صفحه قبلی</a>
+                                    <a href="#">صفحه قبلی</a>
                                 </div>
                                 <ul style="padding-left: 0;margin-bottom: 2px;">
                                     <li><a href="#">1</a></li>

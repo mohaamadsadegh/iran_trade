@@ -4,6 +4,8 @@
     Template Name: archives-articles
 */ ?>
 <?php get_header(); ?>
+<?php gt_set_post_view(); ?>
+
 
 <body id="bg_archives_articles">
 
@@ -45,7 +47,7 @@
                                 </svg>
                             </div>
                             <div class="Number-point-view">
-                                <p>26دیدگاه</p>
+                                <p><?php echo get_comments_number(); ?> دیدگاه ها</p>
                             </div>
                             <div class="Separator-vertical">
                                 <svg width="1" height="24" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,9 +63,7 @@
                                 </svg>
                             </div>
                             <div class="Number-Visit-article">
-                                <p><?php if (function_exists('the_views')) {
-                                        the_views();
-                                    } ?></p>
+                                <p><?= gt_get_post_view(); ?></p>
                             </div>
                             <div class="Separator-vertical">
                                 <svg width="1" height="24" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +79,7 @@
 
                             </div>
                             <div class="title-author-article">
-                                <h3><?php the_author_link(); ?></h3>
+                                <h3></h3>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,6 @@
             </div>
 
         </div>
-
         <div class="container ">
             <div class="row">
                 <div class="sidebar-article col-md-3">
@@ -140,30 +139,41 @@
 
                             </div>
                             <div class="page-fore-single-text">
-                                <p>لورم ایپسوم متن ساختگی با تولید استفاده از ... </p>
+                                <?php previous_post_link(); ?>
                             </div>
                         </div>
                         <div class="d-flex page-next-single">
+                            <div class="page-next-single-text">
+                            <?php next_post_link(); ?>
+                               
+                            </div>
                             <div class="d-flex page-next-single-icon">
                                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.83325 8H18.1666M18.1666 8L11.1666 1M18.1666 8L11.1666 15" stroke="#50598C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1.83325 8H18.1666M1.83325 8L8.83325 1M1.83325 8L8.83325 15" stroke="#50598C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
 
                             </div>
-                            <div class="page-next-single-text">
-                                <p>لورم ایپسوم متن ساختگی با تولید استفاده... </p>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="title-comment-article">
+                                <h3>دیدگاه ها</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="comment-article">
-                        <h3>دیدگاه ها</h3>
-                        <div class="box-comment-article">
-                            <div class="box-comment-single-article">
-                                <div class="info-user d-flex">
-                                    <img src="<?= get_template_directory_uri(); ?>./assets/img/user.jpg" alt="">
-                                    <p>نام کاربری</p>
-                                    <p>1401 / 08 / 07</p>
-                                </div>
+                    
+                    <div class="row">
+                        <div class="add-comment">
+                            <!-- <div>
+                                <h3>افزودن دیدگاه</h3>
+                            </div> -->
+                            <div class="form-comment row d-flex">
+                                
+                                <?php comments_template(); ?>
+                                
                             </div>
                         </div>
                     </div>
@@ -171,6 +181,7 @@
             </div>
         </div>
     </div>
+
 
 
 
