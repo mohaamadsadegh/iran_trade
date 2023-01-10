@@ -1,11 +1,73 @@
 @media (max-width: 576px) {
 
+
+    /* .title-page-articles h1 {
+        
+        font-size: 21px;
+        font-family: IRANSans;
+        margin-top: -115px;
+    }
+
+    .search-articles {
+        position: initial;
+        margin-bottom: 20px;
+    }
+
+    .articles-search-form {
+        width: 537px;
+        height: 64px;
+    }
+
+    .nice-select {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        position: absolute;
+        width: 542.400px;
+        height: 64px;
+    }
+    .current {
+        font-size: 19px;
+    }
+    select.filter_new_articles {
+        width: 560px;
+    } */
+    /* .grouping-article {
+        width: 530px;
+    } */
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {}
 
-  
-}
 @media (max-width: 992px) {
+    .grouping-article {
+        width: 205px;
+    }
 
+    .Lately-article {
+        width: 212px;
+    }
+
+    .search-articles {
+        width: 218px;
+    }
+
+    .archive-search-field {
+        width: 90px;
+    }
+
+    .articles-search-form {
+        width: 206px;
+    }
+
+    .advertising-banner img {
+        width: 202px;
+    }
+    .article h2{
+        padding: 20px 0 16px 0;
+        font-size: 14px;
+    }
+    .article p{
+        font-size: 14px;
+    }
 }
