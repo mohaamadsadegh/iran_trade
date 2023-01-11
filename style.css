@@ -6,7 +6,6 @@ Author URI: /www.mohamad.ir/
 Description: قالب ایران تجارت بزرگترین و با کیفیت ترین قالب ایرانی می باشد
 Version: 1.0
 */
-<<<<<<< HEAD
 @import url(../css/fonts.css);
 
 :root {
@@ -30,29 +29,6 @@ body {
     font-size: 65%;
     font-family: "IRANSans" !important;
     box-sizing: border-box;
-=======
-:root{
-    --primary-color:#28B992;
-    --Secondary-color:#3A4166;
-    --page-color:#F1F1F1;
-    --box-shadow:#C5C5DF4F;
-}
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-}
-
-@font-face {
-    font-family: vazir;
-    src: url("../fonts/woff2/Vazir-Medium.woff2");
-}
-
-body {
-    font-size: 65%;
-    background-color: var(--page-color);
-    font-family: vazir;
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 }
 
 ul,
@@ -83,7 +59,6 @@ img {
     color: #929AC1;
 }
 
-<<<<<<< HEAD
 .search-articles {
     position: absolute;
     /* top: 20px; */
@@ -94,17 +69,6 @@ img {
 }
 
 .archive-search-field {
-=======
-.search {
-    position: absolute;
-    top: 20px;
-    background: #FFFFFF;
-    box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
-    border-radius: 25px;
-}
-
-.articles-search-field {
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
     border: none;
     color: #B8BDD7;
 }
@@ -117,11 +81,7 @@ img {
 .articles-search-form {
     flex-direction: row;
     color: #B8BDD7;
-<<<<<<< HEAD
     width: 317px;
-=======
-    width: 306px;
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
     height: 64px;
     display: flex;
     justify-content: space-between;
@@ -130,21 +90,14 @@ img {
     padding-right: 19px;
 }
 
-<<<<<<< HEAD
 #bg_archives_articles {
     background-color: var(--bg_archives_articles) !important;
 }
-=======
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 
 
 .title-page-articles {
     position: absolute;
-<<<<<<< HEAD
 
-=======
-    top: 30px;
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 }
 
 .title-page-articles h1 {
@@ -190,21 +143,14 @@ img {
 
 .box-article {
     padding: 10px 10px 10px 10px;
-<<<<<<< HEAD
     width: 33%;
-=======
-
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 }
 
 .article img {
     display: block;
     width: 297px;
     height: 160px;
-<<<<<<< HEAD
     border-radius: 20px;
-=======
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 }
 
 .container {
@@ -213,25 +159,15 @@ img {
 
 .articles-box {
     justify-content: end;
-<<<<<<< HEAD
     flex-wrap: wrap;
-=======
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 }
 
 .article h2 {
     font-weight: 600;
     font-size: 17px;
-<<<<<<< HEAD
     text-align: right;
     color: #50598C;
     padding: 20px 0 16px 0;
-=======
-    font-family: IRANSans;
-    text-align: right;
-    color: #50598C;
-    padding: 20px 0 16px 48px;
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 }
 
 .article p {
@@ -256,11 +192,7 @@ img {
     margin: 0;
 }
 
-<<<<<<< HEAD
 .icon-article button svg {
-=======
-.icon-article button img {
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
     width: 33px;
     padding: 10px;
     height: 32px;
@@ -283,11 +215,7 @@ img {
 .Lately-article {
     background-color: #fff;
     width: 306px;
-<<<<<<< HEAD
     height: 500px;
-=======
-    height: 506px;
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
     border-radius: 25px;
 }
 
@@ -296,35 +224,23 @@ img {
     font-size: 20px;
     padding: 20px 20px 0 164px;
     font-family: IRAN;
-<<<<<<< HEAD
     margin-bottom: 0;
-=======
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 }
 
 .Lately-article h3 {
     color: #3A4166;
     font-size: 20px;
-<<<<<<< HEAD
     padding: 20px 20px 0 0;
-=======
-    padding: 20px 20px 0 208px;
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
     font-family: IRAN;
 }
 
 .grouping-article ul>li {
     color: #6C76AB;
-<<<<<<< HEAD
     margin-top: 13px;
-=======
-    margin-top: 15px;
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
     font-size: 15px;
     font-family: IRAN;
 }
 
-<<<<<<< HEAD
 h3.rounded {
     padding-top: 0;
 }
@@ -373,30 +289,11 @@ h3.rounded {
 
 .info-article-box h4 {
     font-size: 14px;
-=======
-.side-article-box {
-    padding: 20px 20px 0px 20px;
-
-}
-
-.side-article-box img {
-    width: 50px;
-    height: 50px;
-}
-
-.info-article-box {
-    margin-top: 24px;
-}
-
-.info-article-box h4 {
-    font-size: 17px;
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
     /* padding: 8px 14px 9px 20px; */
     color: #6C76AB;
     margin: 0;
 }
 
-<<<<<<< HEAD
 .info-article-box-2 h4 {
     font-size: 14px;
     padding-bottom: 5px;
@@ -415,24 +312,13 @@ h3.rounded {
 }
 
 
-=======
-.info-article-box p {
-    color: #B8BDD7;
-}
-
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 .Separator {
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, .1);
     margin-right: 20px;
     margin-left: 23px;
-<<<<<<< HEAD
     margin-top: 5px !important;
     margin-bottom: 20px !important;
-=======
-    margin-top: 0rem !important;
-    margin-bottom: 0rem !important;
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 }
 
 .advertising-banner {
@@ -447,7 +333,6 @@ h3.rounded {
     height: 200px;
 }
 
-<<<<<<< HEAD
 
 .page-numbers {
     display: inline-flex;
@@ -512,28 +397,10 @@ h3.rounded {
 }
 
 .page-numbers-articles {
-=======
-.page-numbers {
-    width: 105px;
-    height: 55px;
-    background: #FFFFFF;
-    box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-.page-numbers p{
-    color: #50598C;
-}
-
-.page-numbers-articles{
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
     display: flex;
     justify-content: center;
 }
 
-<<<<<<< HEAD
 .filter_new_articles {
     border: none;
 }
@@ -1067,53 +934,3 @@ p.logged-in-as {
 .grouping-article\>.\<h3\>مقالات.اخیر\<\/h3\>.\<\/div\>\<div.class\= {
     visibility: hidden;
 }
-=======
-/* start search form header ->moh<- */
-.header_search_form  .search-btn{
-        background: white;
-        border-radius: 50%;
-        padding: 1rem;
-        outline: none;
-        font-size: 1.2rem;
-        color: var(--primary-color);
-        border: none;
-}
-.header_search_form  .search-btn:hover{
-   background-color: var(--primary-color);
-   color: #fff;
-}
-.header_search_form  .modal-dialog .modal-content input{
-width: 60%;
-margin: 0px auto;
-border-radius: 5px;
-padding: 5px;
-border: .2px solid var(--primary-color);
-}
-.header_search_form  .modal-dialog .modal-content{
-padding: 10px;
-}
-.header_search_form .modal-dialog .modal-content .btn-close{
-    background-color: red;
-    padding: 1rem;
-    color: black;
-}
-
-  .header_search_form  .modal-dialog .modal-content input:focus-visible {
-   outline: 1px solid var(--primary-color);
-  }
-  .header_search_form .modal-dialog .modal-content .search_form_btn{
-    background: var(--primary-color);
-    color: #fff;
-    padding: 5px 30px;
-    font-size: 1rem;
-    border: .2px solid var(--primary-color);
-    border-radius: 5px;
-    transition: .2s;
-}
-.header_search_form .modal-dialog .modal-content .search_form_btn:hover{
-    background: #fff;
-    color: var(--primary-color);
-    border: .2px solid var(--primary-color);
-    transition: .2s;
-}
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace

@@ -7,7 +7,6 @@ add_theme_support('menu');
 
 use Automattic\Jetpack\Search\Customizer;
 
-<<<<<<< HEAD
 function loadfiles()
 {
     wp_enqueue_style('style', get_template_directory_uri() . './style.css', false);
@@ -16,15 +15,6 @@ function loadfiles()
     wp_enqueue_style('font-awesome', get_template_directory_uri() . './assets/css/font-awesome.min.css', false);
 }
 add_action('wp_enqueue_scripts', 'loadfiles');
-=======
-// function loadfiles()
-// {
-//   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', false);
-//   wp_enqueue_style('bootstrap', get_template_directory_uri() . './assets/css/bootstrap.min.css', false);
- 
-// }
-// add_action('wp_enqueue_scripts', 'loadfiles');
->>>>>>> bb7e251b4a2a276c71b67d2278c7ea8765c73ace
 
 
 
@@ -199,7 +189,7 @@ function gt_set_post_view() {
     update_post_meta( $post_id, $key, $count );
 }
 function gt_posts_column_views( $columns ) {
-    $columns['post_views'] = 'Views';
+    $columns['post_views'] = 'بازدید';
     return $columns;
 }
 function gt_posts_custom_column_views( $column ) {
@@ -210,4 +200,5 @@ function gt_posts_custom_column_views( $column ) {
 add_filter( 'manage_posts_columns', 'gt_posts_column_views' );
 add_action( 'manage_posts_custom_column', 'gt_posts_custom_column_views' );?>
 
+<!--  -->
 
