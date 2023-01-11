@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const video_slider= new Swiper(".swiper_video", {
+  const video_slider = new Swiper(".swiper_video", {
     spaceBetween: 20,
     slidesPerView: 3,
     centeredSlides: true,
@@ -11,4 +11,11 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
   });
+});
+
+$(document).ready(function () {
+  const comment_slider = new Swiper(".swiper_comment", {
+    slidesPerView: 2,
+    loop:true,
+    });
 });

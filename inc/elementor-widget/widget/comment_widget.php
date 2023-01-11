@@ -215,15 +215,7 @@ class widget_custom_comment_slider extends Elementor\Widget_Base
             </div>
         </div>
 
-        <script>
-            $(document).ready(function() {
-                const comment_slider = new Swiper('.swiper_comment', {
-                    slidesPerView: 3,
-                    
-                });
-
-            });
-        </script>
+      
 
         <!-- ind card shop  ->moh<- -->
 
