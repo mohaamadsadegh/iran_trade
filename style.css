@@ -947,6 +947,7 @@ figure.wp-block-image.size-full {
 }
 
 .form-box-name {
+    margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
     width: 272px;
@@ -1002,7 +1003,12 @@ button.btn.Submit-form {
 .form-comment-article {
     flex-direction: row-reverse;
 }
-
+input#submit {
+    margin-top: 10px;
+}
+textarea#comment{
+    margin-top: 6px;
+}
 .p.form-submit {
     width: 286px;
     height: 47px;

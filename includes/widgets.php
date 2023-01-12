@@ -89,7 +89,7 @@ class Categoriesarticles extends WP_Widget
 ?>
         <?php
         // the query
-        $the_query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => '3')); ?>
+        $the_query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => '2')); ?>
         <?php if ($the_query->have_posts()) : ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 

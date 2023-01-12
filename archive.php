@@ -3,8 +3,9 @@
 /*
     Template Name: archives-articles
 */ ?>
-<?php get_header();?>
-<?php the_content();?>
+<?php get_header(); ?>
+<?php the_content(); ?>
+
 <body id="bg_archives_articles">
     <br><br><br><br>
     <div class="container ">
@@ -113,31 +114,17 @@
                         <p><?php _e('متاسفانه متنی وجود ندارد.'); ?></p>
                     <?php endif; ?>
                 </div>
+                <div class="pagenumbers mt-9 flex w-full justify-center">
+                    <?php the_posts_pagination(array(
+                        'mid_size' => 5,
+                        'prev_text' => __('صفحه قبلی', 'textdomain'),
+                        'next_text' => __('صفحه بعدی', 'textdomain'),
+                    )); ?>
 
-
-                    <div class="row">
-                        <div class="col-md-9 page-numbers-articles">
-                            <div class="page-numbers">
-                                <div class='pagination'>
-
-                                    <div class="page-fore">
-                                    <a href="#">صفحه قبلی</a>
-                                </div>
-                                <ul style="padding-left: 0;margin-bottom: 2px;">
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">10</a></li>
-                                </ul>
-                                <div class="page-next">
-                                    <a href="http://localhost/test2/%D8%A2%D8%B1%D8%B4%DB%8C%D9%88-%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA/">صفحه بعدی</a>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-<?php get_footer();?>
+
+    <?php get_footer(); ?>
