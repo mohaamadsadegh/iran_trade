@@ -1,20 +1,32 @@
 <?php
 require_once __DIR__ . "/inc/elementor-widget/register.php";
-add_theme_support('menu');
 
 
+if (! function_exists( 'iran_trade_register_nav_menu') ) {
+    function iran_trade_register_nav_menu(){
+        register_nav_menus(array(
+            'primary_menus' => __('منوی اصلی' , 'iran_trade'),
+            'side_menu' => __('منوی کناری' , 'iran_trade'),
+            'footer_menu' => __('منوی فوتر' , 'iran_trade'),
+        ) );
+    }
+    add_action('after_setup_theme','iran_trade_register_nav_menu', 0);
+}
+add_theme_support('menus');
 function loadfiles()
 {
-    wp_enqueue_style('style', get_template_directory_uri() . './style.css', false);
-    wp_enqueue_style('bootstrap', get_template_directory_uri() . './assets/css/bootstrap.min.css', false);
-    wp_enqueue_style('Responsive', get_template_directory_uri() . './assets/css/responsive.css', false);
-    wp_enqueue_style('font-awesome', get_template_directory_uri() . './assets/css/font-awesome.min.css', false);
-   
-    wp_enqueue_script('bootstrap.min', get_template_directory_uri() . './assets/js/bootstrap.min.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('jquery-3.6.0', get_template_directory_uri() . './assets/js/jquery-3.6.0.min.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('script', get_template_directory_uri() . './assets/js/script.js', array('swiper'), '1.0', 'false');
-    wp_enqueue_script('main', get_template_directory_uri() . './assets/js/swiper.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('typed', get_template_directory_uri() . './assets/js/typed.js', array('jquery'), '1.0', 'false');
+    // style files
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css', false);
+    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', false);
+    wp_enqueue_style('Responsive', get_template_directory_uri() . '/assets/css/responsive.css', false);
+    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', false);
+    wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper.css', false);
+
+//    script files
+    wp_enqueue_script('bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+    wp_enqueue_script('jquery-3.6.0', get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js');
+    wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js');
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/swiper.js');
 }
 add_action('wp_enqueue_scripts', 'loadfiles');
 
