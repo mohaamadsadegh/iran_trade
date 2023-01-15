@@ -53,6 +53,29 @@ class video_slider extends Elementor\Widget_Base{
                   'media_types' => ['image'],
                 ],
             );
+            $repeater_video->add_control(
+              'icon_video',
+              [
+                'label' => esc_html__( 'Icon', 'textdomain' ),
+                'type' => \Elementor\Controls_Manager::ICONS,
+                'default' => [
+                  'value' => 'fas fa-circle',
+                  'library' => 'fa-solid',
+                ],
+                'recommended' => [
+                  'fa-solid' => [
+                    'circle',
+                    'dot-circle',
+                    'square-full',
+                  ],
+                  'fa-regular' => [
+                    'circle',
+                    'dot-circle',
+                    'square-full',
+                  ],
+                ],
+              ]
+            );
             $this->add_control(
               'slider_video',
               [
@@ -156,13 +179,13 @@ $this->end_controls_section();
       <?php foreach ($settings['slider_video'] as $video) { ?>
               <div class="swiper-slide">
                 <div class="box">
-                <video controls poster="<?php echo $video['image']['url'] ?>">
+                <video  id="vid" poster="<?php echo $video['image']['url'] ?>">
               <source  src="<?php echo $video ['video']['url'] ?>"></video>
+              <div id="hide" class="show_icon"><?php \Elementor\Icons_Manager::render_icon( $video['icon_video']); ?></div>
                 </div>
               </div>
               <?php 
       } ?>
-
             </div>
             <?php
              if ( 'yes' === $settings['show_pagination'] ) { ?>
@@ -185,7 +208,25 @@ $this->end_controls_section();
           </div>
         </div>
 
+<script>
+  $(document).ready(function () {
+  const video_slider = new Swiper(".swiper_video", {
+    spaceBetween: 20,
+    slidesPerView: 3,
+    centeredSlides: true,
+    
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
 
+
+  </script>
       <?php 
 	}
 
