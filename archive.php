@@ -1,11 +1,4 @@
-<?php
-
-/*
-    Template Name: archives-articles
-*/ ?>
 <?php get_header(); ?>
-<?php the_content(); ?>
-
 <body id="bg_archives_articles">
     <br><br><br><br>
     <div class="container ">
@@ -24,13 +17,13 @@
             </div>
             <div class="col-md-3">
                 <div class="title-page-articles">
-                    <h1><?= the_title(); ?></h1>
+                    <h1><?= wp_title(); ?></h1>
                 </div>
             </div>
             <div class="col-md-6  filter-articles">
                 <?php if (!is_category()) { ?>
                     <div class="nice-select">
-                        <span class="current">فیلتربندی:</span>
+                        <span class="filtering">فیلتربندی:</span>
                         <?php $current_page = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
                         <select class="filter_new_articles" onchange="location = this.value;">
                             <option <?php echo (isset($_GET['order']) && $_GET['order'] == 'DESC') ? 'selected' : ''; ?> value="<?php echo add_query_arg(array('order' => 'DESC'), $current_page); ?>">
@@ -88,7 +81,7 @@
                             <div class="box-article">
                                 <div class="article ">
                                     <?php the_post_thumbnail('articlethumb'); ?>
-                                    <h2><?php the_title(); ?></h2>
+                                    <h2><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 7); ?></a></h2>
                                     <p><?php the_excerpt(); ?></p>
                                     <div class="info-article d-flex">
                                         <div class="Date">
@@ -107,23 +100,38 @@
                                     </div>
                                 </div>
                             </div>
-
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
                     <?php else : ?>
                         <p><?php _e('متاسفانه متنی وجود ندارد.'); ?></p>
                     <?php endif; ?>
-                </div>
-                <div class="pagenumbers mt-9 flex w-full justify-center">
-                    <?php the_posts_pagination(array(
-                        'mid_size' => 5,
-                        'prev_text' => __('صفحه قبلی', 'textdomain'),
-                        'next_text' => __('صفحه بعدی', 'textdomain'),
-                    )); ?>
 
                 </div>
+
+                <div class="pagenumbers">
+                <?php
+							echo paginate_links( array(
+								'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+								'total'        => $the_query->max_num_pages,
+								'current'      => max( 1, get_query_var( 'paged' ) ),
+								'format'       => '?paged=%#%',
+								'show_all'     => false,
+								'type'         => 'list',
+								'end_size'     => 2,
+								'mid_size'     => 2,
+								'prev_next'    => true,
+								'prev_text'    => 'صفحه قبلی',
+								'next_text'    => 'صفحه بعدی',
+								'add_args'     => false,
+								'add_fragment' => '',
+							) );
+							?>
+                        </div>
+                </div>
+                
             </div>
         </div>
+    </div>
     </div>
 
 

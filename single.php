@@ -1,13 +1,6 @@
-<?php
-
-/*
-    Template Name: archives-articles
-*/ ?>
 <?php get_header(); ?>
-<?php gt_set_post_view(); ?>
-
-
-<body id="bg_archives_articles">
+<?php echo gt_set_post_view(); ?>
+<div id="bg_archives_articles">
 
     <div class="container ">
         <div class="row">
@@ -72,6 +65,7 @@
                             </div>
                         </div>
                         <div class="author-article d-flex">
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                             <div class="icon-author-article">
                                 <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 19C1 15.134 4.13401 12 8 12C8.33952 12 8.6734 12.0242 9 12.0709M12 5C12 7.20914 10.2091 9 8 9C5.79086 9 4 7.20914 4 5C4 2.79086 5.79086 1 8 1C10.2091 1 12 2.79086 12 5ZM9.58984 19L11.6148 18.595C11.7914 18.5597 11.8797 18.542 11.962 18.5097C12.0351 18.4811 12.1045 18.4439 12.1689 18.399C12.2414 18.3484 12.3051 18.2848 12.4324 18.1574L16.5898 14C17.1421 13.4477 17.1421 12.5523 16.5898 12C16.0376 11.4477 15.1421 11.4477 14.5898 12L10.4324 16.1574C10.3051 16.2848 10.2414 16.3484 10.1908 16.421C10.1459 16.4853 10.1088 16.5548 10.0801 16.6279C10.0478 16.7102 10.0302 16.7985 9.99484 16.975L9.58984 19Z" stroke="#929AC1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -79,7 +73,7 @@
 
                             </div>
                             <div class="title-author-article">
-                                <h3></h3>
+                                <h3><?php the_author(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -95,12 +89,14 @@
                 </div>
                 <div class="col-md-9">
                     <div class="box-single-article ">
+                   
                         <div class="Photo-single-article">
                             <?php the_post_thumbnail('Singlearticle'); ?>
                         </div>
                         <div class="title-single-article">
                             <?php the_content(); ?>
                         </div>
+                        
                         <div class="Grouping-article d-flex">
                             <h3>دسته بندی:</h3>
                             <p><?php the_category(' ، '); ?></p>
@@ -116,17 +112,20 @@
 
                             <div class="col-md-4 share-single-article">
                                 <div class="share-article">
-                                    <a href="#">
+                                    <a href="#" id="share-article">
                                         اشتراک گذاری مقاله
                                     </a>
                                 </div>
                                 <div class=""><svg width="1" height="24" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <line x1="0.5" y1="2.18557e-08" x2="0.499999" y2="24" stroke="#DEDEDE" />
                                     </svg></div>
-                                <div class="icon-share-article"><svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div id="icon-share-article"><svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.25 14C16.0537 14 15.0005 14.5709 14.3137 15.4433L7.31719 11.9656C7.44375 11.6141 7.5 11.3375 7.5 11C7.5 10.6625 7.44375 10.3438 7.31719 10.0344L14.2734 6.55672C15 7.42813 16.0547 8 17.25 8C19.3219 8 21 6.32188 21 4.25C21 2.17812 19.3219 0.5 17.25 0.5C15.1781 0.5 13.5 2.17906 13.5 4.25C13.5 4.58609 13.5584 4.90578 13.6414 5.21563L6.68438 8.69375C5.95781 7.82188 4.94531 7.25 3.75 7.25C1.67906 7.25 0 8.92813 0 11C0 13.0719 1.67906 14.75 3.75 14.75C4.94625 14.75 5.99953 14.1791 6.68625 13.3067L13.6425 16.7844C13.5563 17.0938 13.5 17.4125 13.5 17.75C13.5 19.8209 15.1791 21.5 17.25 21.5C19.3209 21.5 21 19.8209 21 17.75C21 15.6791 19.3219 14 17.25 14ZM17.25 2C18.4922 2 19.5 3.00922 19.5 4.25C19.5 5.49078 18.4922 6.5 17.25 6.5C16.0078 6.5 15 5.49219 15 4.25C15 3.00781 16.0078 2 17.25 2ZM3.75 13.25C2.50922 13.25 1.5 12.2422 1.5 11C1.5 9.75781 2.50922 8.75 3.75 8.75C4.99078 8.75 6 9.75781 6 11C6 12.2422 4.99219 13.25 3.75 13.25ZM17.25 20C16.0092 20 15 18.9908 15 17.75C15 16.5092 16.0092 15.5 17.25 15.5C18.4908 15.5 19.5 16.5092 19.5 17.75C19.5 18.9908 18.4922 20 17.25 20Z" fill="#929AC1" />
                                     </svg></div>
                             </div>
+                            <?php endwhile; else : ?>
+	<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
                         </div>
 
                     </div>
@@ -144,8 +143,8 @@
                         </div>
                         <div class="d-flex page-next-single">
                             <div class="page-next-single-text">
-                            <?php next_post_link(); ?>
-                               
+                                <?php next_post_link(); ?>
+
                             </div>
                             <div class="d-flex page-next-single-icon">
                                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,14 +163,14 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="add-comment">
-                            
+
                             <div class="form-comment row d-flex">
-                                
+
                                 <?php comments_template(); ?>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -179,13 +178,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-    <br><br><br><br>
-
-
-
-
+</div>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 <?php get_footer(); ?>
