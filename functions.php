@@ -1,20 +1,34 @@
 <?php
 require_once __DIR__ . "/inc/elementor-widget/register.php";
-add_theme_support('menu');
 
 
+if (! function_exists( 'iran_trade_register_nav_menu') ) {
+    function iran_trade_register_nav_menu(){
+        register_nav_menus(array(
+            'primary_menus' => __('منوی اصلی' , 'iran_trade'),
+            'side_menu' => __('منوی کناری' , 'iran_trade'),
+            'footer_menu' => __('منوی فوتر' , 'iran_trade'),
+        ) );
+    }
+    add_action('after_setup_theme','iran_trade_register_nav_menu', 0);
+}
+add_theme_support('menus');
 function loadfiles()
 {
-    wp_enqueue_style('style', get_template_directory_uri() . './style.css', false);
-    wp_enqueue_style('bootstrap', get_template_directory_uri() . './assets/css/bootstrap.min.css', false);
-    wp_enqueue_style('Responsive', get_template_directory_uri() . './assets/css/responsive.css', false);
-    wp_enqueue_style('font-awesome', get_template_directory_uri() . './assets/css/font-awesome.min.css', false);
-    wp_enqueue_script('bootstrap.min', get_template_directory_uri() . './assets/js/bootstrap.min.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('jquery-3.6.0', get_template_directory_uri() . './assets/js/jquery-3.6.0.min.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('script', get_template_directory_uri() . './assets/js/script.js', array('swiper'), '1.0', 'false');
-    wp_enqueue_script('main', get_template_directory_uri() . './assets/js/swiper.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('typed', get_template_directory_uri() . './assets/js/typed.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('main', get_template_directory_uri() . './assets/js/main.js', array('jquery'), '1.0', 'false');
+     // style files
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css', false);
+    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', false);
+    wp_enqueue_style('Responsive', get_template_directory_uri() . '/assets/css/responsive.css', false);
+    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', false);
+    wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper.css', false);
+//    script files
+    wp_enqueue_script('bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '1.0', 'false');
+    wp_enqueue_script('jquery-3.6.0', get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js', array('jquery'), '1.0', 'false');
+    wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js', array('swiper'), '1.0', 'false');
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/swiper.js', array('jquery'), '1.0', 'false');
+    wp_enqueue_script('typed', get_template_directory_uri() . '/assets/js/typed.js', array('jquery'), '1.0', 'false');
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0', 'false');
+
 }
 add_action('wp_enqueue_scripts', 'loadfiles');
 
@@ -203,59 +217,3 @@ function gt_posts_custom_column_views($column)
 }
 add_filter('manage_posts_columns', 'gt_posts_column_views');
 add_action('manage_posts_custom_column', 'gt_posts_custom_column_views');
-
-// شماره صفحات
-function mihanwp_numeric_posts_nav()
-	{
-	if (is_singular()) return;
-	global $wp_query;
-	/** Stop execution if there's only 1 page */
-	if ($wp_query->max_num_pages <= 1) return;
-	$paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
-	$max = intval($wp_query->max_num_pages);
-	/** Add current page to the array */
-	if ($paged >= 1) $links[] = $paged;
-	/** Add the pages around the current page to the array */
-	if ($paged >= 3)
-		{
-		$links[] = $paged - 1;
-		$links[] = $paged - 2;
-		}
-
-	if (($paged + 2) <= $max)
-		{
-		$links[] = $paged + 2;
-		$links[] = $paged + 1;
-		}
-
-	echo '<div class="navigation"><ul>' . "\n";
-	/** Previous Post Link */
-	if (get_previous_posts_link()) printf('<li>%s</li>' . "\n", get_previous_posts_link());
-	/** Link to first page, plus ellipses if necessary */
-	if (!in_array(1, $links))
-		{
-		$class = 1 == $paged ? ' class="active"' : '';
-		printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link(1)) , '1');
-		if (!in_array(2, $links)) echo '<li>…</li>';
-		}
-
-	/** Link to current page, plus 2 pages in either direction if necessary */
-	sort($links);
-	foreach((array)$links as $link)
-		{
-		$class = $paged == $link ? ' class="active"' : '';
-		printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($link)) , $link);
-		}
-
-	/** Link to last page, plus ellipses if necessary */
-	if (!in_array($max, $links))
-		{
-		if (!in_array($max - 1, $links)) echo '<li>…</li>' . "\n";
-		$class = $paged == $max ? ' class="active"' : '';
-		printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($max)) , $max);
-		}
-
-	/** Next Post Link */
-	if (get_next_posts_link()) printf('<li>%s</li>' . "\n", get_next_posts_link());
-	echo '</ul></div>' . "\n";
-	}

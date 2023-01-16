@@ -3,6 +3,7 @@ $(document).ready(function () {
     spaceBetween: 20,
     slidesPerView: 3,
     centeredSlides: true,
+    
     pagination: {
       el: ".swiper-pagination",
     },
@@ -18,4 +19,17 @@ $(document).ready(function () {
     slidesPerView: 2,
     loop:true,
     });
+});
+
+
+
+$('.swiper_video .swiper-slide .box video').click(function() {
+  if (this.paused) {
+ $(this).get(0).play();
+ $(this).siblings(".show_icon").hide();
+  }
+else{
+  $(this).get(0).pause();
+  $(".show_icon").show();
+}
 });
