@@ -44,7 +44,7 @@ if ( post_password_required() )
   'cancel_reply_link' => __( 'لغو پاسخ' ),
   'label_submit'      => __( 'Post Comment' ),
 
-  'comment_field' =>  '<div class="row form-comment-article"><div class="col-12 col-md-8"><label for="msg"></label><textarea id="comment" placeholder="متن شما" name="comment" cols="58" rows="3" aria-required="true" class="box-text-form col-md-6"></textarea>' .'</textarea>'.'</div>',
+  'comment_field' =>  '<div class="row form-comment-article"><div class="col-12 col-md-8"><label for="msg" class="Comment-text"></label><textarea id="comment" placeholder="متن شما" name="comment" cols="58" rows="3" aria-required="true" class="box-text-form col-md-6"></textarea>' .'</textarea>'.'</div>',
   
 
   

@@ -19,9 +19,7 @@ class widget_custom_search extends Elementor\Widget_Base{
    public function get_icon(){
     return 'eicon-site-search';
    }
-   public function get_custom_help_uri(){
-   return 'https://essentialwebapps.com/category/elementor-tutorial/'; 
-   }
+   
    public function get_categories(){
         return ['themsah'];
    }

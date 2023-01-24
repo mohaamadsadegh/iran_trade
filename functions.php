@@ -2,33 +2,33 @@
 require_once __DIR__ . "/inc/elementor-widget/register.php";
 
 
-if (! function_exists( 'iran_trade_register_nav_menu') ) {
-    function iran_trade_register_nav_menu(){
+if (!function_exists('iran_trade_register_nav_menu')) {
+    function iran_trade_register_nav_menu()
+    {
         register_nav_menus(array(
-            'primary_menus' => __('منوی اصلی' , 'iran_trade'),
-            'side_menu' => __('منوی کناری' , 'iran_trade'),
-            'footer_menu' => __('منوی فوتر' , 'iran_trade'),
-        ) );
+            'primary_menus' => __('منوی اصلی', 'iran_trade'),
+            'side_menu' => __('منوی کناری', 'iran_trade'),
+            'footer_menu' => __('منوی فوتر', 'iran_trade'),
+        ));
     }
-    add_action('after_setup_theme','iran_trade_register_nav_menu', 0);
+    add_action('after_setup_theme', 'iran_trade_register_nav_menu', 0);
 }
 add_theme_support('menus');
 function loadfiles()
 {
-     // style files
-    wp_enqueue_style('style', get_template_directory_uri() . '/style.css', false);
+    // style files
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', false);
     wp_enqueue_style('Responsive', get_template_directory_uri() . '/assets/css/responsive.css', false);
     wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', false);
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper.css', false);
-//    script files
-    wp_enqueue_script('bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('jquery-3.6.0', get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js', array('swiper'), '1.0', 'false');
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/swiper.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('typed', get_template_directory_uri() . '/assets/js/typed.js', array('jquery'), '1.0', 'false');
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0', 'false');
-
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css', false);
+    wp_enqueue_style('styleNew', get_template_directory_uri() . './assets/css/styleNew.css', false);
+    //    script files
+    wp_enqueue_script('bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+    wp_enqueue_script('jquery-3.6.0', get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js');
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/swiper.js');
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js');
+    wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js');
 }
 add_action('wp_enqueue_scripts', 'loadfiles');
 
@@ -42,37 +42,20 @@ add_image_size('Singlearticle', 926, 452, true);
 
 function widgetregister()
 {
-
     register_sidebar(array(
-        'name'          => 'سومین ابزارک',
-        'id'            => 'leftsidebar',
-        'before_widget' => '<div class="grouping-article>',
-        'after_widget'  => '</div>',
-        'before_title'  => '<div class="grouping-article><h3>',
-        'after_title'   => '</h3>',
-    ));
-    register_sidebar(array(
-        'name'          => 'دومین ابزارک',
+        'name'          => 'سایدبار آرشیو مقالات',
         'id'            => 'leftsidebar2',
         'before_widget' => '<div class="Lately-article>',
         'after_widget'  => '</div>',
-        'before_title'  => '<div class="Lately-article text-right">
-        <h3 class="title-sidebar"> ',
+        'before_title'  => ' <div class="Lately-article><h3 class="title-sidebar"> ',
         'after_title'   => '</h3>',
     ));
     register_sidebar(array(
-        'name'          => 'ستون تبلیغات راست قالب',
+        'name'          => 'سایدبار سینگل مقالات',
         'id'            => 'leftsidebar3',
         'before_widget' => '<div class="Lately-article>',
         'after_widget'  => '</div>',
-    ));
-    register_sidebar(array(
-        'name'          => 'بخش سرچ فرم',
-        'id'            => 'searchform',
-        'before_widget' => '<div class="Lately-article>',
-        'after_widget'  => '</div>',
-        'before_title'  => '<div class="Lately-article text-right">
-        <h3 class="rounded"> ',
+        'before_title'  => ' <div class="Lately-article><h3 class="title-sidebar"> ',
         'after_title'   => '</h3>',
     ));
 }
@@ -80,6 +63,7 @@ add_action('widgets_init', 'widgetregister');
 
 
 require_once __DIR__ . '/includes/widgets.php';
+require_once __DIR__ . '/includes/breadcrumb.php';
 
 function wpdocs_theme_slug_widgets_init()
 {
@@ -98,62 +82,7 @@ add_action('widgets_init', 'wpdocs_theme_slug_widgets_init');
 
 
 
-function the_breadcrumb()
-{
 
-    $sep = ' > ';
-
-    if (!is_front_page()) {
-
-        // Start the breadcrumb with a link to your homepage
-        echo '<div class="breadcrumbs">';
-        echo '<a href="';
-        echo get_option('home');
-        echo '">';
-        bloginfo('name');
-        echo '</a>' . $sep;
-
-        // Check if the current page is a category, an archive or a single page. If so show the category or archive name.
-        if (is_category() || is_single()) {
-            the_category('>');
-        } elseif (is_archive() || is_single()) {
-            if (is_day()) {
-                printf(__('%s', 'text_domain'), get_the_date());
-            } elseif (is_month()) {
-                printf(__('%s', 'text_domain'), get_the_date(_x('F Y', 'monthly archives date format', 'text_domain')));
-            } elseif (is_year()) {
-                printf(__('%s', 'text_domain'), get_the_date(_x('Y', 'yearly archives date format', 'text_domain')));
-            } else {
-                _e('Blog Archives', 'text_domain');
-            }
-        }
-
-        // If the current page is a single post, show its title with the separator
-        if (is_single()) {
-            echo $sep;
-            the_title();
-        }
-
-        // If the current page is a static page, show its title.
-        if (is_page()) {
-            echo the_title();
-        }
-
-        // if you have a static page assigned to be you posts list page. It will find the title of the static page and display it. i.e Home >> Blog
-        if (is_home()) {
-            global $post;
-            $page_for_posts_id = get_option('page_for_posts');
-            if ($page_for_posts_id) {
-                $post = get_post($page_for_posts_id);
-                setup_postdata($post);
-                the_title();
-                rewind_posts();
-            }
-        }
-
-        echo '</div>';
-    }
-}
 
 function advanced_comment($comment, $args, $depth)
 {
@@ -186,7 +115,7 @@ function advanced_comment($comment, $args, $depth)
             </div>
         </div>
     </div>
-<?php } 
+<?php }
 
 /**
  * get post views 

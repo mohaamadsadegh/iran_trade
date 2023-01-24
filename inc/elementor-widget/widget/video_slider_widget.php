@@ -43,7 +43,7 @@ class video_slider extends Elementor\Widget_Base{
                 'label' => esc_html__( 'فیلم', 'textdomain' ),
                 'type' => \Elementor\Controls_Manager::MEDIA,
                 'media_types' => ['video'],
-              ],
+              ]
           );
           $repeater_video->add_control(
             'image',
@@ -51,7 +51,7 @@ class video_slider extends Elementor\Widget_Base{
                   'label' => esc_html__( 'تصویر زمینه', 'textdomain' ),
                   'type' => \Elementor\Controls_Manager::MEDIA,
                   'media_types' => ['image'],
-                ],
+                ]
             );
             $repeater_video->add_control(
               'icon_video',
@@ -211,10 +211,25 @@ $this->end_controls_section();
 <script>
   $(document).ready(function () {
   const video_slider = new Swiper(".swiper_video", {
-    spaceBetween: 20,
-    slidesPerView: 3,
+    // spaceBetween: 20,
+    breakpoints: {
+        '@0.75': {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        '@1.00': {
+          slidesPerView: 3,
+          spaceBetween: 5,
+        },
+        '@1.50': {
+          slidesPerView: 3,
+          spaceBetween: 5,
+        },
+      },
+    loop:true,
+    // slidesPerView: 3,
     centeredSlides: true,
-    
+      
     pagination: {
       el: ".swiper-pagination",
     },
@@ -223,6 +238,16 @@ $this->end_controls_section();
       prevEl: ".swiper-button-prev",
     },
   });
+  $('.swiper_video .swiper-slide .box video').click(function() {
+  if (this.paused) {
+ $(this).get(0).play();
+ $(this).siblings(".show_icon").hide();
+  }
+else{
+  $(this).get(0).pause();
+  $(".show_icon").show();
+}
+});
 });
 
 

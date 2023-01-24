@@ -1,4 +1,4 @@
-<form action="<?php echo home_url('/'); ?>" method="get" class="articles-search-form" >
+<form action="<?php echo home_url('/'); ?>" method="GET" class="articles-search-form" >
     <input type="text" class="archive-search-field" name="s" placeholder="<?php echo esc_attr_x( 'جستجو کنید' , 'placeholder') ?>" value="<?php the_search_query(); ?>">
     <button type="submit" name="button" class="button">
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">

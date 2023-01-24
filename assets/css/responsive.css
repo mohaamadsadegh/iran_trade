@@ -1,43 +1,150 @@
 @media (max-width: 576px) {
-
-
-    /* .title-page-articles h1 {
-        
-        font-size: 21px;
-        font-family: IRANSans;
-        margin-top: -115px;
+    .breadcrumbs a {
+        font-size: 13px !important;
     }
 
-    .search-articles {
-        position: initial;
-        margin-bottom: 20px;
+    .title-page-articles h1 {
+        font-size: 17px !important;
+    }
+
+    .grouping-article {
+        width: 100% !important;
+        margin-top: 24px !important;
     }
 
     .articles-search-form {
-        width: 537px;
-        height: 64px;
+        width: 100% !important;
     }
 
-    .nice-select {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        position: absolute;
-        width: 542.400px;
-        height: 64px;
+    .search-articles {
+        width: 94% !important;
     }
-    .current {
-        font-size: 19px;
-    }
-    select.filter_new_articles {
-        width: 560px;
-    } */
-    /* .grouping-article {
-        width: 530px;
-    } */
 
+    .Lately-article {
+        width: 100% !important;
+    }
+
+    .box-single-article {
+        width: 100% !important;
+    }
+
+    .Photo-single-article img {
+        width: 93% !important;
+        height: 50% !important;
+    }
+
+    .title-single-article {
+        font-weight: 500 !important;
+        font-size: 13px !important;
+    }
+    .Grouping-article-title p a{
+        font-size: 13px !important;
+        font-weight: 500 !important;
+    }
+    .Grouping-article-title h3{
+        font-size: 15px !important; 
+        font-weight: 500 !important;
+    }
+    .label-single-article h3{
+        font-size: 13px !important; 
+        font-weight: 500 !important;
+    }
+    .label-single p a {
+        font-size: 12px !important; 
+        font-weight: 500 !important;
+    }
+    .share-single-article{
+        margin-right: 85px !important;
+    }
+    .page-fore-single-article {
+        width: 100% !important;
+    }
+    .share-article a{
+        font-weight: 500;
+    }
+    .grouping-article h3{
+        font-size: 15px !important;
+    }
+    .Lately-article h3{
+        font-size: 15px !important;
+    }
+    .post-categories li a{
+        font-size: 14px !important;
+    }
+    .info-article-box-2 h4{
+        font-size: 14px !important;
+    }
+    .info-article-box-2 p{
+        font-size: 13px !important;
+    }
+    /* responsive archive */
+    .articles-box{
+        display: inline !important;
+    }
+    .sidebar-archive{
+        position: initial !important;
+    }
+    .search-articles{
+        position: initial !important;
+        width: 100% !important;
+    }
+    .filter-articles{
+        margin-top: 50px !important;
+    }
+    .title-page-articles{
+        margin-top: 50px !important; 
+    }
+    .filtering{
+        font-size: 13px !important;
+    }
+    select.filter_new_articles{
+        font-size: 13px !important;
+    }
+    .box-article{
+        width: 100% !important;
+    }
+    .article img{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .sidebar-single{
+        top:0 !important;
+    }
+    .search-single{
+        width: 98% !important;
+    }
+    .form-box-name{
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+    .comment-respond{
+        height: 400px !important;
+        margin-bottom: 50px !important;
+    }
+    .btn-success{
+        margin-top: 50px !important;
+        width: 100% !important;
+        margin-right:0 !important;
+
+    }
+    .form-box-email{
+        margin-top: 0 !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+    .info-bloge{
+        visibility: hidden;
+    }
+    .container-single{
+       overflow: hidden;
+    }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .breadcrumbs a{
+        font-size: 15px !important ;
+    }
+}
 
 @media (max-width: 992px) {
     .grouping-article {
@@ -63,11 +170,13 @@
     .advertising-banner img {
         width: 202px;
     }
-    .article h2{
+
+    .article h2 {
         padding: 20px 0 16px 0;
         font-size: 14px;
     }
-    .article p{
+
+    .article p {
         font-size: 14px;
     }
 }

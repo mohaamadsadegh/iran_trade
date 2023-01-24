@@ -94,7 +94,7 @@ class widget_custom_cart extends Elementor\Widget_Base
 			[
 				'label' => esc_html__( 'انحنای مرز', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', '%', 'em', '' ],
+				'size_units' => [ 'px', '%', 'em'],
 				'selectors' => [
 					'{{WRAPPER}} .card_shop_button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
@@ -139,7 +139,7 @@ class widget_custom_cart extends Elementor\Widget_Base
 			\Elementor\Group_Control_Background::get_type(),
 			[
 				'name' => 'background_hover',
-				'types' => [ 'classic', 'gradient', '' ],
+				'types' => [ 'classic', 'gradient'],
 				'selector' => '{{WRAPPER}} .card_shop_button:hover',
 			]
 		);

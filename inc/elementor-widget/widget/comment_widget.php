@@ -55,7 +55,7 @@ class widget_custom_comment_slider extends Elementor\Widget_Base
                     'type' => \Elementor\Controls_Manager::TEXT,
                     'default' => esc_html__( 'نام کاربر', 'textdomain' ),
                     'placeholder' => esc_html__( 'نام کاربر....', 'textdomain' ),
-                ],
+                ]
             );
             $repeater->add_control(
                 'category',
@@ -115,6 +115,30 @@ class widget_custom_comment_slider extends Elementor\Widget_Base
                     ],
                 ]
             );
+            $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+			    'label'=>'تایپوگرافی متن کامنت',
+				'name' => 'content_typography',
+				'selector' => '{{WRAPPER}} .box_comment_cop',
+			]
+		);
+		    $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+			    'label'=>'تاپیوگرافی متن کاربر',
+				'name' => 'content_typography_user',
+				'selector' => '{{WRAPPER}} .box_comment_user',
+			]
+		);
+				    $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+			    'label'=>'تایپوگرافی متن دسته بندی',
+				'name' => 'content_typography_cat',
+				'selector' => '{{WRAPPER}} .box_comment_cat',
+			]
+		);
             $this->add_control(
                 'text_color_user',
                 [
@@ -216,6 +240,31 @@ class widget_custom_comment_slider extends Elementor\Widget_Base
         </div>
 
       
+<script>
+    $(document).ready(function () {
+  const comment_slider = new Swiper(".swiper_comment", {
+    // slidesPerView: 2,
+    loop:true,
+      breakpoints: {
+        '@0.75': {
+          slidesPerView: 1,
+        //   spaceBetween: 1,
+        },
+        '@1.00': {
+          slidesPerView: 2,
+        //   spaceBetween: 5,
+        },
+        '@1.50': {
+          slidesPerView: 2,
+        //   spaceBetween: 5,
+        },
+      }
+    });
+    
+});
+    
+</script>
+
 
         <!-- ind card shop  ->moh<- -->
 

@@ -35,7 +35,7 @@ class widget_custom_menu extends Elementor\Widget_Base
   }
   public function get_keywords()
   {
-    ['منو', 'meno'];
+    ['منو', 'meuo'];
   }
   public function register_controls()
   {

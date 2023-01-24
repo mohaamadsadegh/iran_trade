@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php
+
+/*
+    Template Name: archives
+*/
+get_header();
+?>
+
 <body id="bg_archives_articles">
     <br><br><br><br>
     <div class="container ">
@@ -11,13 +18,13 @@
         </div>
         <div class="row text-right">
             <div class="col-md-3">
-                <div class="search-articles">
-                    <?php dynamic_sidebar('searchform'); ?>
+               <div class="sidebar-archive">
+                     <?php get_sidebar(); ?>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="title-page-articles">
-                    <h1><?= wp_title(); ?></h1>
+                    <h1><?= wp_title(''); ?></h1>
                 </div>
             </div>
             <div class="col-md-6  filter-articles">
@@ -38,6 +45,7 @@
                         </select>
                     </div>
                 <?php } ?>
+				
             </div>
 
 
@@ -46,8 +54,8 @@
     <br><br><br><br>
     <div class="container ">
         <div class="row">
-            <div class="sidebar-article col-md-3">
-                <?php get_sidebar(); ?>
+           <div class="sidebar-article col-md-3">
+                
             </div>
             <div class="col-md-9">
                 <div class="articles-box d-flex">
@@ -71,10 +79,11 @@
                     }
                     // the query
                     $the_query = new WP_Query(array(
-                        'post_type' => 'post',
-                        'paged' => $paged,
-                        'orderby' => $orderby,
-                        'order' => $order,
+                         'post_type'=>'post',
+        'paged'=>$paged,
+        'meta_key'=>$meta_key,
+        'orderby'=>$orderby,
+        'order'=>$order,
                     )); ?>
                     <?php if ($the_query->have_posts()) : ?>
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -82,7 +91,7 @@
                                 <div class="article ">
                                     <?php the_post_thumbnail('articlethumb'); ?>
                                     <h2><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 7); ?></a></h2>
-                                    <p><?php the_excerpt(); ?></p>
+                                  <?php the_excerpt(); ?>
                                     <div class="info-article d-flex">
                                         <div class="Date">
                                             <p><?php echo get_the_date(); ?></p>
