@@ -140,7 +140,8 @@ Version: 1.0.1
 }
 
 
-body {}
+body { font-family: "Dana-Pro" !important;
+    box-sizing: border-box;}
 
 ul,
 li {
