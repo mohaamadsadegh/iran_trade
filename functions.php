@@ -33,13 +33,13 @@ function loadfiles()
 add_action('wp_enqueue_scripts', 'loadfiles');
 
 
-
+// Featured images
 add_theme_support('post-thumbnails');
 add_image_size('articlethumb', 266, 130, true);
 add_image_size('articlethumb2', 50, 50, true);
 add_image_size('Singlearticle', 926, 452, true);
 
-
+// Sidebar widget
 function widgetregister()
 {
     register_sidebar(array(
@@ -61,29 +61,10 @@ function widgetregister()
 }
 add_action('widgets_init', 'widgetregister');
 
-
+// Addressing files
 require_once __DIR__ . '/includes/widgets.php';
 require_once __DIR__ . '/includes/breadcrumb.php';
-
-function wpdocs_theme_slug_widgets_init()
-{
-    register_sidebar(array(
-        'name'          => __('Main Sidebar', 'textdomain'),
-        'id'            => 'sidebar-1',
-        'description'   => __('Widgets in this area will be shown on all posts and pages.', 'textdomain'),
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h2 class="widgettitle">',
-        'after_title'   => '</h2>',
-    ));
-}
-add_action('widgets_init', 'wpdocs_theme_slug_widgets_init');
-
-
-
-
-
-
+// advanced_comment
 function advanced_comment($comment, $args, $depth)
 {
     $GLOBALS['comment'] = $comment; ?>

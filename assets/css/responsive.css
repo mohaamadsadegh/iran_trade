@@ -1,4 +1,5 @@
 @media (max-width: 576px) {
+    /* start archive */
     .breadcrumbs a {
         font-size: 13px !important;
     }
@@ -138,6 +139,7 @@
     .container-single{
        overflow: hidden;
     }
+    /* end responsive archive */
 }
 
 @media (max-width: 768px) {
@@ -147,6 +149,7 @@
 }
 
 @media (max-width: 992px) {
+    /* start archive */
     .grouping-article {
         width: 205px;
     }
@@ -179,4 +182,5 @@
     .article p {
         font-size: 14px;
     }
+    /* end archive */
 }

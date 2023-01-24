@@ -1,4 +1,5 @@
 <?php
+// Sidebar archive widget
 class searchform extends WP_Widget
 {
 
@@ -65,6 +66,7 @@ add_action('widgets_init', 'register_Custom_widgetb');
 
 ?>
 <?php
+// Sidebar widget Categoriesarticles
 class My_Widget extends WP_Widget {
     public function __construct() {
         parent::__construct(
@@ -130,6 +132,7 @@ class My_Widget extends WP_Widget {
 $my_widget = new My_Widget();
 ?>
 <?php
+// Sidebar widget  Latest_articles
 class Latest_articles extends WP_Widget {
     public function __construct() {
         parent::__construct(
@@ -216,6 +219,7 @@ $my_widget = new Latest_articles();
 
 ?>
 <?php
+
 class search_form extends WP_Widget {
     public function __construct() {
         parent::__construct(
@@ -270,6 +274,7 @@ $my_widget = new search_form();
 
 
 ?><?php
+// Sidebar single  widget searchform
 class searchformsingle extends WP_Widget
 {
 

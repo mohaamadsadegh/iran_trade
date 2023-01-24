@@ -1,4 +1,5 @@
 <?php 
+//  Start the breadcrumb
 function the_breadcrumb()
 {
 
@@ -32,9 +33,9 @@ function the_breadcrumb()
         if (is_page()) {
 
 
-            echo '<a ';
+            echo '<a class="br-page';
             echo get_option('page');
-            echo '>';
+            echo '">';
             echo the_title();
             echo '</a>';
         }

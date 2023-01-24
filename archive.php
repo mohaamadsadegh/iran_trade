@@ -89,7 +89,9 @@ get_header();
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                             <div class="box-article">
                                 <div class="article ">
+                                <a href="<?php the_permalink(); ?>">
                                     <?php the_post_thumbnail('articlethumb'); ?>
+                    </a>
                                     <h2><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 7); ?></a></h2>
                                   <?php the_excerpt(); ?>
                                     <div class="info-article d-flex">
