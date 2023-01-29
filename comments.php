@@ -16,8 +16,13 @@
 if ( post_password_required() )
 	return;
 ?>
-  <?php if ( have_comments() ) : ?>
-                  <?php wp_list_comments('type=comment&avatar_size=80&callback=advanced_comment'); ?>
+  <?php if ( have_comments() ) { ?>
+    <div class="title-comment-article">
+       <h3>دیدگاه ها</h3>
+       </div>
+    
+   <?php wp_list_comments('type=comment&avatar_size=80&callback=advanced_comment'); ?>
+   
     <?php
       // Are there comments to navigate through?
       if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
@@ -28,9 +33,20 @@ if ( post_password_required() )
       <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentythirteen' ) ); ?></div>
     </nav><!-- .comment-navigation -->
     <?php endif; // Check for comment navigation ?>
-  <?php endif; // have_comments() ?>
+  <?php   } else {
+      ?>
+      <div class="title-not-comment">
+      <h1>دیدگاه ها</h1>
+  </div>
+      <div class="not-comment">
+        <h2>دیدگاهی وجود ندارد</h1>
+      </div>
+      <?php
+    } // have_comments() ?>
 
-
+  <div class="title-comment-article">
+     <h3>افزودن دیدگاه</h3>
+  </div>
 
 
 <?php if ( comments_open()) : ?>
@@ -67,6 +83,7 @@ if ( post_password_required() )
     'author' =>'<div class="col-12 col-md-4"><input class="form-box-name " type="text" name="name" placeholder=" نام ونام خانوادگی">' . esc_attr( $commenter['comment_author'] ) .' ',
 
     'email' =>'<label></label><input class="form-box-email " type="email" name="email" placeholder=" پست الکترونیکی">'  . esc_attr(  $commenter['comment_author_email'] ) .' </div>',
+    
     )
   ),
   

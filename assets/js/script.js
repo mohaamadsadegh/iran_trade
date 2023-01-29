@@ -30,9 +30,15 @@ jQuery(document).ready(function () {
         $temp.val($url).select();
         document.execCommand("copy");
         $temp.remove();
-        alert ('لینک مقاله با موفقیت کپی شد');
-
+        $('#share-article').append('<div><strong>لینک مقاله با موفقیت کپی شد</strong></div>');
         });
+        jQuery('#icon-share-article').click(function () {
+          jQuery("body").append($temp);
+          $temp.val($url).select();
+          document.execCommand("copy");
+          $temp.remove();
+          $('#share-article').append('<div><strong>لینک مقاله با موفقیت کپی شد</strong></div>');
+          });
     });
 });
 
@@ -60,3 +66,27 @@ jQuery(function($){
     tb_remove();
   }
 });
+
+
+// آموزشی 
+
+      $(document).ready(function(){
+        $("#hide").click(function(){
+          $(".Social-Networks").show();
+        });
+        $("#show").click(function(){
+          $(".Social-Networks").hide();
+        });
+      });
+
+      // 
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });

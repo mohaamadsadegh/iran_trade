@@ -33,7 +33,7 @@
                             </div>
                             <p><?php echo get_the_date(); ?></p>
                         </div>
-                        <div class="Visit-article col-md-9">
+                        <div class="Visit-article col-md-10">
                             <div class="point-view-article d-flex">
                                 <div class="icon-point-view">
                                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -118,12 +118,16 @@
                                         اشتراک گذاری مقاله
                                     </a>
                                 </div>
+                               
                                 <div class=""><svg width="1" height="24" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <line x1="0.5" y1="2.18557e-08" x2="0.499999" y2="24" stroke="#DEDEDE" />
                                     </svg></div>
                                 <div id="icon-share-article"><svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.25 14C16.0537 14 15.0005 14.5709 14.3137 15.4433L7.31719 11.9656C7.44375 11.6141 7.5 11.3375 7.5 11C7.5 10.6625 7.44375 10.3438 7.31719 10.0344L14.2734 6.55672C15 7.42813 16.0547 8 17.25 8C19.3219 8 21 6.32188 21 4.25C21 2.17812 19.3219 0.5 17.25 0.5C15.1781 0.5 13.5 2.17906 13.5 4.25C13.5 4.58609 13.5584 4.90578 13.6414 5.21563L6.68438 8.69375C5.95781 7.82188 4.94531 7.25 3.75 7.25C1.67906 7.25 0 8.92813 0 11C0 13.0719 1.67906 14.75 3.75 14.75C4.94625 14.75 5.99953 14.1791 6.68625 13.3067L13.6425 16.7844C13.5563 17.0938 13.5 17.4125 13.5 17.75C13.5 19.8209 15.1791 21.5 17.25 21.5C19.3209 21.5 21 19.8209 21 17.75C21 15.6791 19.3219 14 17.25 14ZM17.25 2C18.4922 2 19.5 3.00922 19.5 4.25C19.5 5.49078 18.4922 6.5 17.25 6.5C16.0078 6.5 15 5.49219 15 4.25C15 3.00781 16.0078 2 17.25 2ZM3.75 13.25C2.50922 13.25 1.5 12.2422 1.5 11C1.5 9.75781 2.50922 8.75 3.75 8.75C4.99078 8.75 6 9.75781 6 11C6 12.2422 4.99219 13.25 3.75 13.25ZM17.25 20C16.0092 20 15 18.9908 15 17.75C15 16.5092 16.0092 15.5 17.25 15.5C18.4908 15.5 19.5 16.5092 19.5 17.75C19.5 18.9908 18.4922 20 17.25 20Z" fill="#929AC1" />
-                                    </svg></div>
+                                    </svg>
+
+                                
+                                </div>
                             </div>
                         <?php endwhile;
                                 else : ?>
@@ -132,39 +136,38 @@
                         </div>
 
                     </div>
-                    <div class="d-flex page-fore-single-article">
-                        <div class="d-flex page-fore-single">
-                            <div class="page-fore-single-icon">
-                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="row page-fore-single-archive">
+                    <div class="col-md-3  "><?php  
+$previous=get_previous_post();  
+if($previous){ ?> 
+<div class="page-fore-single">
+<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.83325 8H18.1666M18.1666 8L11.1666 1M18.1666 8L11.1666 15" stroke="#50598C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+<?php previous_post_link(' %link'); ?>
 
-                            </div>
-                            <div class="page-fore-single-text">
-                                <?php previous_post_link(' %link'); ?>
-                            </div>
-                        </div>
-                        <div class="d-flex page-next-single">
-                            <div class="page-next-single-text">
-                                <?php next_post_link(' %link'); ?>
-
-
-                            </div>
-                            <div class="d-flex page-next-single-icon">
-                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div>
+<?php
+}  
+?>  
+                    </div>
+                    <div class="col-md-3 "><?php  
+$next=get_next_post();  
+if($next){ ?> 
+<div class="page-next-single">
+<?php next_post_link(' %link'); ?>
+<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.83325 8H18.1666M1.83325 8L8.83325 1M1.83325 8L8.83325 15" stroke="#50598C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-
-                            </div>
-
-                        </div>
-
+</div>
+<?php
+}  
+?>  
                     </div>
+                   
                     <div class="row">
                         <div class="col-md-9">
-                            <div class="title-comment-article">
-                                <h3>دیدگاه ها</h3>
-                            </div>
+                            
                         </div>
                     </div>
 

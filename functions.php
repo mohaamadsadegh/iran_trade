@@ -64,6 +64,7 @@ add_action('widgets_init', 'widgetregister');
 // Addressing files
 require_once __DIR__ . '/includes/widgets.php';
 require_once __DIR__ . '/includes/breadcrumb.php';
+
 // advanced_comment
 function advanced_comment($comment, $args, $depth)
 {
@@ -127,3 +128,17 @@ function gt_posts_custom_column_views($column)
 }
 add_filter('manage_posts_columns', 'gt_posts_column_views');
 add_action('manage_posts_custom_column', 'gt_posts_custom_column_views');
+// Get the contact form in the widget
+function cf7_themsah(){
+    $forms=get_posts([
+        'post_type'=>'wpcf7_contact_form',
+        'numberposts'=> -1,
+   ]);
+    $forms_name=[];
+    if(!empty($forms)&& !is_wp_error($forms)){
+        foreach($forms as $form){
+            $forms_name[$form -> ID]=$form -> post_title ;
+        }
+    }
+    return $forms_name ;
+}

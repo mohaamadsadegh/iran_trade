@@ -22,12 +22,11 @@ get_header();
                      <?php get_sidebar(); ?>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="title-page-articles">
-                    <h1><?= wp_title(''); ?></h1>
-                </div>
-            </div>
-            <div class="col-md-6  filter-articles">
+            <div class="col-md-9">
+                <div class="title-page-articles d-flex">
+                    <div class="title-page">
+                    <h1><?= wp_title(''); ?></h1></div>
+                    <div class=" filter-articles">
                 <?php if (!is_category()) { ?>
                     <div class="nice-select">
                         <span class="filtering">فیلتربندی:</span>
@@ -47,6 +46,28 @@ get_header();
                 <?php } ?>
 				
             </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-6  filter-articles">
+                <?php if (!is_category()) { ?>
+                    <div class="nice-select">
+                        <span class="filtering">فیلتربندی:</span>
+                        <?php $current_page = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+                        <select class="filter_new_articles" onchange="location = this.value;">
+                            <option <?php echo (isset($_GET['order']) && $_GET['order'] == 'DESC') ? 'selected' : ''; ?> value="<?php echo add_query_arg(array('order' => 'DESC'), $current_page); ?>">
+                                جدیدترین ها
+                            </option>
+                            <option <?php echo (isset($_GET['order']) && $_GET['order'] == 'ASC') ? 'selected' : ''; ?> value="<?php echo add_query_arg(array('order' => 'ASC'), $current_page); ?>">
+                                قدیمی ترین
+                            </option>
+                            <option <?php echo (isset($_GET['order']) && $_GET['order'] == 'post_views_count') ? 'selected' : ''; ?> value="<?php echo add_query_arg(array('order' => 'post_views_count'), $current_page); ?>">
+                                پربازدید
+                            </option>
+                        </select>
+                    </div>
+                <?php } ?>
+				
+            </div> -->
 
 
         </div>

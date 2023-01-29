@@ -20,9 +20,9 @@ Version: 1.0.1
 
 @font-face {
     font-family: "Dana-Pro";
-    src: url("./assets/fonts/woff/dana-demibold.woff") format("woff");
-    src: url("./assets/fonts/woff2/dana-demibold.woff2") format("woff2");
-    src: url("./assets/fonts/eot/dana-demibold.eot") format("eot");
+    src: url("./assets/fonts/woff/dana-black.woff") format("woff");
+    src: url("./assets/fonts/woff2/dana-black.woff2") format("woff2");
+    src: url("./assets/fonts/eot/dana-black.eot") format("eot");
     font-weight: 600;
 }
 
@@ -66,61 +66,7 @@ Version: 1.0.1
     font-weight: 500;
 }
 
-/* IranSans Farsi Numbers */
 
-@font-face {
-    font-family: "IranSansFaNam";
-    src: url("../fonts/IRANSansWeb(FaNum).ttf") format("ttf");
-    src: url("../fonts/IRANSansWeb(FaNum).woff") format("woff");
-    src: url("../fonts/IRANSansWeb(FaNum).woff2") format("woff2");
-    src: url("../fonts/IRANSansWeb(FaNum).eot") format("eot");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "IranSansFaNam";
-    src: url("../fonts/IRANSansWeb(FaNum)_Black.eot") format("eot");
-    src: url("../fonts/IRANSansWeb(FaNum)_Black.ttf") format("ttf");
-    src: url("../fonts/IRANSansWeb(FaNum)_Black.woff") format("woff");
-    src: url("../fonts/IRANSansWeb(FaNum)_Black.woff2") format("woff2");
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: "IranSansFaNam";
-    src: url("../fonts/IRANSansWeb(FaNum)_Bold.eot") format("eot");
-    src: url("../fonts/IRANSansWeb(FaNum)_Bold.woff") format("woff");
-    src: url("../fonts/IRANSansWeb(FaNum)_Bold.woff2") format("woff2");
-    src: url("../fonts/IRANSansWeb(FaNum)_Bold.ttf") format("ttf");
-    font-weight: 900;
-}
-
-@font-face {
-    font-family: "IranSansFaNam";
-    src: url("./assets/fonts/FaNum/") format("eot");
-    src: url("./assets/fonts/FaNum/IRANSans\(FaNum\)_Light.ttf") format("ttf");
-    src: url("./assets/fonts/FaNum/IRANSans\(FaNum\)_Light.ttf") format("woff");
-    src: url("./assets/fonts/FaNum/IRANSans\(FaNum\)_Light.ttf") format("woff2");
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: "IranSansFaNam";
-    src: url("../fonts/IRANSansWeb(FaNum)_UltraLight.eot") format("eot");
-    src: url("../fonts/IRANSansWeb(FaNum)_UltraLight.ttf") format("ttf");
-    src: url("../fonts/IRANSansWeb(FaNum)_UltraLight.woff") format("woff");
-    src: url("../fonts/IRANSansWeb(FaNum)_UltraLight.woff2") format("woff2");
-    font-weight: 100;
-}
-
-@font-face {
-    font-family: "IranSansFaNam";
-    src: url("../fonts/IRANSansWeb(FaNum)_Medium.eot") format("eot");
-    src: url("../fonts/IRANSansWeb(FaNum)_Medium.ttf") format("ttf");
-    src: url("../fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff");
-    src: url("../fonts/IRANSansWeb(FaNum)_Medium.woff2") format("woff2");
-    font-weight: 500;
-}
 
 :root {
     --primary-color: #28B992;
@@ -128,15 +74,15 @@ Version: 1.0.1
     --page-color: #F1F1F1;
     --box-shadow: #C5C5DF4F;
     --bg_archives_articles: #EDEFFA;
-    --articles-breadcrumbs-link:#626168;
-    --beadcrumbs:#929AC1;
-    --background:#50598c;
-    --white:#fff;
-    --archive-search-field:#B8BDD7;
-    --post-categories:#DEE1ED;
-    --date:#F0F2FA;
-    --grouping-article:#6C76AB;
-    --Green:#28B992;
+    --articles-breadcrumbs-link: #626168;
+    --beadcrumbs: #929AC1;
+    --background: #50598c;
+    --white: #fff;
+    --archive-search-field: #B8BDD7;
+    --post-categories: #DEE1ED;
+    --date: #F0F2FA;
+    --grouping-article: #6C76AB;
+    --Green: #28B992;
 }
 
 * {
@@ -144,13 +90,13 @@ Version: 1.0.1
     margin: 0;
     text-decoration: none;
     direction: rtl;
-    box-sizing: border-box;
-    font-family: "Dana-Pro" !important;
 }
 
 
-body { font-family: "Dana-Pro" !important;
-    box-sizing: border-box;}
+body {
+    font-family: "Dana-Pro" !important;
+    box-sizing: border-box;
+}
 
 ul,
 li {
@@ -214,6 +160,7 @@ img {
     box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
     border-radius: 25px;
 }
+
 /* sidebar-archive */
 .sidebar-archive {
     position: absolute;
@@ -253,11 +200,11 @@ img {
 
 }
 
-.title-page-articles h1 {
+.title-page h1 {
     color: var(--background);
     font-size: 25px;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 9px;
     margin-right: 10px;
 }
 
@@ -265,7 +212,9 @@ img {
     display: flex;
     justify-content: end;
     top: 30px;
+    width: 850px;
 }
+
 /* Filtering archive */
 .nice-select {
     position: absolute;
@@ -384,7 +333,7 @@ img {
     border: 1px solid var(--background);
     border-radius: 25px;
     background: var(--white);
-  }
+}
 
 .grouping-article {
     background-color: var(--white);
@@ -421,6 +370,7 @@ img {
     font-weight: 500;
     margin-bottom: 0;
 }
+
 /* Sidebar widget */
 .grouping-article ul>li {
     color: var(--grouping-article);
@@ -462,7 +412,7 @@ h3.rounded {
     height: 10px;
     background: var(--post-categories);
     border-radius: 20px;
-   margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .post-categories li {
@@ -528,6 +478,7 @@ h3.rounded {
     width: 306px;
     height: 200px;
 }
+
 .page-numbers {
     display: inline-flex;
     justify-content: center;
@@ -624,12 +575,13 @@ h3.rounded {
 .Single-articles {
     padding-top: 35px;
 }
-.info-bloge{
+
+.info-bloge {
     padding-top: 35px;
 }
 
 .articles-date-box {
-    background-color:  var(--bg_archives_articles);
+    background-color: var(--bg_archives_articles);
     width: 131px;
     height: 44px;
     border-radius: 15px;
@@ -849,11 +801,15 @@ figure.wp-block-image.size-full {
 }
 
 .page-fore-single {
-
+    margin-top: 20px;
     height: 68px;
     background-color: var(--white);
     box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
     border-radius: 25px;
+    padding: 20px;
+    color: var(--background);
+    font-size: 15px;
+    padding-top: 20px !important;
 }
 
 .page-fore-single-article {
@@ -869,32 +825,36 @@ figure.wp-block-image.size-full {
     padding-left: 0px;
 }
 
-.page-fore-single-text {
-    padding: 20px;
-    color: var(--background);
-    font-size: 15px;
-    padding-top: 20px !important;
-}
 
-.page-fore-single-text a {
+
+.page-fore-single a {
     color: var(--background);
     font-weight: 500;
     font-size: 15px;
 }
 
-.page-fore-single-text a:hover {
+.page-fore-single a:hover {
     color: var(--Green);
     font-weight: 500;
     font-size: 15px;
 }
 
-.page-next-single {
+.page-fore-single-archive {
+    display: flex;
+    justify-content: space-between;
+}
 
+.page-next-single {
+    margin-top: 20px;
+    padding: 20px;
+    color: var(--background);
+    font-size: 15px;
     height: 68px;
     background-color: var(--white);
     box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
     border-radius: 25px;
     justify-content: end;
+    display: flex;
 }
 
 .page-next-single-icon {
@@ -903,21 +863,15 @@ figure.wp-block-image.size-full {
     padding-left: 20px;
 }
 
-.page-next-single-text {
-    padding: 20px;
-    color: var(--background);
-    font-size: 15px;
-}
+.page-next-single a {
 
-.page-next-single-text a {
-    padding: 20px;
     color: var(--background);
     font-size: 15px;
     font-weight: 500;
-    padding-left: 0px;
+    padding-left: 15px;
 }
 
-.page-next-single-text a:hover {
+.page-next-single a:hover {
     color: var(--Green);
     font-weight: 500;
     font-size: 15px;
@@ -952,6 +906,36 @@ figure.wp-block-image.size-full {
 
 .children {
     padding-left: 0 !important;
+}
+
+.not-comment {
+    width: 966px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
+}
+.not-comment h2 {
+    color:#50598C;
+    font-size: 21px;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+}
+.title-not-comment{
+    margin-top: 40px;
+}
+.title-not-comment h1 {
+    color:#50598C;
+    font-size: 25px;
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+
+.box-Social {
+    background: #50598C;
+    width: 148px;
+    height: 60px;
+    border-radius: 25px;
 }
 
 .box-comment-single-article {
@@ -1043,11 +1027,12 @@ figure.wp-block-image.size-full {
 
 .comment-respond {
     width: 966px;
-    height: 221px;
+    height: 293px;
     background: var(--white) !important;
     box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
     border-radius: 25px;
     margin-top: 24px !important;
+    margin-bottom: 20px;
 }
 
 .form-box-name {
@@ -1135,7 +1120,7 @@ textarea#comment {
     background-color: var(--Green) !important;
     box-shadow: 0px 5px 10px rgba(40, 185, 146, 0.2) !important;
     border-radius: 25px !important;
-    width: 286px ;
+    width: 286px;
     height: 47px !important;
     border: none !important;
     position: relative !important;
@@ -1165,30 +1150,35 @@ p.logged-in-as {
 .button-searchform {
     margin-bottom: 5px;
 }
+
 .breadcrumbs a {
     color: var(--articles-breadcrumbs-link);
     font-weight: 500;
     font-size: 16px;
     padding-left: 5px;
 }
+
 .breadcrumbs .br-page {
     color: var(--Secondary-color);
     font-weight: 500;
     font-size: 16px;
     padding-left: 5px;
 }
+
 .breadcrumbs a:hover {
     color: var(--Green);
     font-weight: 500;
     font-size: 16px;
     padding-left: 5px;
 }
+
 select.filter_new_articles {
     color: var(--background);
     font-size: 15px;
     font-weight: 500;
     background: var(--white);
 }
+
 .pagenumbers a {
     background: var(--white);
     box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
@@ -1626,7 +1616,7 @@ select.filter_new_articles {
 .archive_slider_swiper .box .image {
     width: 100%;
     padding: 20px;
-    height: 170px ;
+    height: 170px;
     border-radius: 25px;
 }
 
@@ -1738,14 +1728,14 @@ select.filter_new_articles {
 /* ind archive slider style ->moh<-*/
 
 
-.breadcrumbs a {
+.bread a {
     color: var(--articles-breadcrumbs-link);
     font-weight: 500;
     font-size: 16px;
     padding-left: 5px;
 }
 
-.breadcrumbs a:hover {
+.bread a:hover {
     color: var(--Green);
     font-weight: 500;
     font-size: 16px;
@@ -1802,7 +1792,145 @@ select.filter_new_articles {
     outline: none;
 }
 
-
 .Comment-text {
     display: inline !important;
+}
+
+.Social-Networks {
+    background: var(--white);
+    width: 148px;
+    height: 60px;
+    box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
+    border-radius: 25px;
+}
+
+/* contactus */
+.Contact-Form {
+    width: 584px;
+    height: 616px;
+    background: var(--white);
+    box-shadow: 0px 34px 85px -21px rgba(197, 197, 223, 0.31);
+    border-radius: 25px;
+
+}
+
+.icon-Contact-Form::before {
+    position: absolute;
+    content: ' ';
+    background: var(--primary-color);
+    width: 68px;
+    height: 68px;
+    border-radius: 40px;
+    left: 738px;
+    top: 21px;
+    box-shadow: 0px 5px 30px -10px rgba(197, 197, 223, 0.6);
+}
+
+.Contact-us {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Contact-us-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.icon-Contact-Form {
+    display: flex;
+    align-items: center;
+}
+
+.icon-Contact-Form img {
+    position: absolute;
+    left: 754px;
+    top: 37px;
+}
+
+.title-contact-form h1 {
+    color: var(--Secondary-color);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 16px;
+}
+
+.title-contact-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 107px;
+}
+
+.help-contact-form {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--background);
+    margin: 20px;
+    text-align: center;
+}
+
+.svg-contact-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 13px;
+
+}
+
+
+input[type="text"] {
+    direction: rtl !important;
+    width: 267px;
+    height: 47px;
+    background: var(--white);
+    /* border: 1px solid #B8BDD7; */
+    padding-right: 15px;
+    margin-left: 9px;
+    margin-top: 16px;
+    outline: none;
+}
+
+input[type="tel"] {
+    direction: rtl !important;
+    width: 267px;
+    height: 47px;
+    background: var(--white);
+    /* border: 1px solid #B8BDD7; */
+    padding-right: 15px;
+    margin-left: 9px;
+    margin-top: 16px;
+    outline: none;
+}
+
+
+textarea {
+    width: 544px;
+    height: 133px;
+    padding-right: 15px;
+    padding-top: 16px;
+    margin-top: 16px;
+    outline: none;
+    background: var(--white);
+    /* border: 1px solid #B8BDD7; */
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.form {
+    margin: 10px;
+}
+
+input[type="submit"] {
+    background: var(--primary-color);
+    box-shadow: 0px 5px 10px rgba(40, 185, 146, 0.2);
+    border-radius: 25px;
+    width: 286px;
+    height: 47px;
+    outline: none;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--white);
+    border: none;
 }

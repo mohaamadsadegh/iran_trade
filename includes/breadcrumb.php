@@ -10,7 +10,7 @@ function the_breadcrumb()
     if (!is_front_page()) {
 
         // Start the breadcrumb with a link to your homepage
-        echo '<div class="breadcrumbs">';
+        echo '<div class="bread">';
         echo '<a href="';
         echo get_option('home');
         echo '">';

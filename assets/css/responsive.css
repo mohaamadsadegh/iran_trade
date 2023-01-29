@@ -5,7 +5,7 @@
     }
 
     .title-page-articles h1 {
-        font-size: 17px !important;
+        font-size: 19px !important;
     }
 
     .grouping-article {
@@ -89,11 +89,12 @@
         position: initial !important;
         width: 100% !important;
     }
-    .filter-articles{
+    /* .filter-articles{
         margin-top: 50px !important;
-    }
+    } */
     .title-page-articles{
         margin-top: 50px !important; 
+        width: 550px !important;
     }
     .filtering{
         font-size: 13px !important;
@@ -139,7 +140,31 @@
     .container-single{
        overflow: hidden;
     }
+    .title-page{
+        width: 250px;
+    }
+    .filter-articles{
+        width: 300px;
+    }
     /* end responsive archive */
+    /* start contactus */
+    .title-contact-form h1 {
+        font-size: 15px !important;
+    }
+    .help-contact-form{
+        font-size: 13px !important;
+    }
+    .box-name{
+        width: 92% !important;
+        margin-right: 15px;
+    }
+    .box-text{
+        width: 92% !important;
+        margin-right: 15px;
+    }
+    .title-contact-form{
+        margin-top: 0 !important;
+    }
 }
 
 @media (max-width: 768px) {
