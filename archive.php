@@ -48,28 +48,7 @@ get_header();
             </div>
                 </div>
             </div>
-            <!-- <div class="col-md-6  filter-articles">
-                <?php if (!is_category()) { ?>
-                    <div class="nice-select">
-                        <span class="filtering">فیلتربندی:</span>
-                        <?php $current_page = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
-                        <select class="filter_new_articles" onchange="location = this.value;">
-                            <option <?php echo (isset($_GET['order']) && $_GET['order'] == 'DESC') ? 'selected' : ''; ?> value="<?php echo add_query_arg(array('order' => 'DESC'), $current_page); ?>">
-                                جدیدترین ها
-                            </option>
-                            <option <?php echo (isset($_GET['order']) && $_GET['order'] == 'ASC') ? 'selected' : ''; ?> value="<?php echo add_query_arg(array('order' => 'ASC'), $current_page); ?>">
-                                قدیمی ترین
-                            </option>
-                            <option <?php echo (isset($_GET['order']) && $_GET['order'] == 'post_views_count') ? 'selected' : ''; ?> value="<?php echo add_query_arg(array('order' => 'post_views_count'), $current_page); ?>">
-                                پربازدید
-                            </option>
-                        </select>
-                    </div>
-                <?php } ?>
-				
-            </div> -->
-
-
+           
         </div>
     </div>
     <br><br><br><br>

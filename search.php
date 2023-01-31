@@ -52,7 +52,7 @@
                             </div>
                        <?php endwhile;
                         else : ?>
-                            <p><?php esc_html_e('متاسفانه محتوایی یافت نشد'); ?></p>
+                            <p class="search_text"><?php esc_html_e('متاسفانه محتوایی یافت نشد'); ?></p>
                         <?php endif; ?>
 
                 </div>

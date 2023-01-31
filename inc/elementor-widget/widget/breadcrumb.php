@@ -126,7 +126,7 @@ if (!defined('ABSPATH')) {
 				]
 			);
 			$this->add_control(
-				'text_color2',
+				'box_text_color',
 				[
 					'label' => esc_html__( 'رنگ متن صفحه داخلی', 'textdomain' ),
 					'type' => \Elementor\Controls_Manager::COLOR,

@@ -89,7 +89,7 @@
                 <div class="sidebar-single col-md-3">
                     <?php dynamic_sidebar('leftsidebar3'); ?>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-9 box-single-container">
                     <div class="box-single-article ">
 
                         <div class="Photo-single-article">
@@ -137,7 +137,7 @@
 
                     </div>
                 <div class="row page-fore-single-archive">
-                    <div class="col-md-3  "><?php  
+                    <div class="col-md-3  page_single"><?php  
 $previous=get_previous_post();  
 if($previous){ ?> 
 <div class="page-fore-single">
@@ -151,7 +151,7 @@ if($previous){ ?>
 }  
 ?>  
                     </div>
-                    <div class="col-md-3 "><?php  
+                    <div class="col-md-3 page_single"><?php  
 $next=get_next_post();  
 if($next){ ?> 
 <div class="page-next-single">

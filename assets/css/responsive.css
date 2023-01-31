@@ -1,5 +1,14 @@
 @media (max-width: 576px) {
     /* start archive */
+    .btn_none{
+        display: inline !important;
+    }
+    .submit-btn{
+        width: 94% !important;
+    }
+    .page_single{
+        width: 169px !important;
+    }
     .breadcrumbs a {
         font-size: 13px !important;
     }
@@ -12,7 +21,12 @@
         width: 100% !important;
         margin-top: 24px !important;
     }
-
+    .box-type-comment{
+        padding-right: 33px !important; 
+    }
+    .box-text-form{
+        width: 95% !important;
+    }
     .articles-search-form {
         width: 100% !important;
     }
@@ -115,24 +129,55 @@
     .search-single{
         width: 98% !important;
     }
-    .form-box-name{
-        width: 100% !important;
+    .not-comment h2{
+        font-size: 18px !important;
+    }
+    .title-not-comment h1{
+        font-size: 20px !important;
+    }
+    .is-layout-flow ul li::before {
+        display: none;
+    }
+    .not-comment{
+        margin-right: 20px !important;
+    }
+    .title-comment-article h3{
+        font-size: 20px !important;
+    }
+    .form-box-name {
+        width: 92% !important;
+        margin-right: 20px !important;
+    }
+    .info-bloge{
+        padding-top: 0 !important;
+    }
+    .breadcrumbs-articles{
+        margin-bottom: 0 !important;
+    }
+    .form-box-email {
+        margin-top: 20px !important;
+        width: 92% !important;
+        margin-right: 20px !important;
+        margin-bottom: 0 !important;
+    }
+    .is-layout-flow.wp-block-column{
         margin-right: 0 !important;
     }
-    .comment-respond{
+    .wp-block-image img{
+        max-width: 119% !important;
+    }
+    /* .comment-respond{
         height: 400px !important;
         margin-bottom: 50px !important;
-    }
+    } */
     .btn-success{
         margin-top: 50px !important;
         width: 100% !important;
         margin-right:0 !important;
 
     }
-    .form-box-email{
-        margin-top: 0 !important;
-        width: 100% !important;
-        margin-right: 0 !important;
+    #submit-btn{
+        display: none;
     }
     .info-bloge{
         visibility: hidden;

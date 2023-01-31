@@ -90,3 +90,17 @@ jQuery(function($){
             prevEl: ".swiper-button-prev",
         },
     });
+
+   
+  // 
+  jQuery(document).ready(function(){
+    jQuery('#form_widget').on('submit',function(e){
+      e.preventDefault();
+      let username = jQuery('#username').val();
+      let number = jQuery('#number').val();
+      let text = jQuery('#text').val();
+      let type = jQuery('#type').val();
+      let text_form = jQuery('#text_form').val();
+      console.log(username);
+    });
+  });
